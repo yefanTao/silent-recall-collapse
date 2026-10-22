@@ -1,0 +1,402 @@
+{
+  "config": {
+    "dataset": "wdc",
+    "N_TEST": 6000,
+    "N_Q": 3,
+    "MAX_POOL": 50,
+    "SEED": 43,
+    "n_entities": 6000,
+    "n_queries": 18000,
+    "spaces": [
+      "minilm_l6",
+      "bge_small",
+      "bge_base",
+      "e5_base",
+      "gte_base"
+    ],
+    "ground_truth": "cluster_id",
+    "search": "exact entity-level max-IP"
+  },
+  "per_eval": {
+    "minilm_l6": {
+      "full": {
+        "R@1": 0.5546111111111112,
+        "R@10": 0.6273333333333333,
+        "n_index": 46189
+      },
+      "random": {
+        "R@1": 0.4633888888888889,
+        "R@10": 0.5664444444444444,
+        "n_index": 6000
+      },
+      "centroid": {
+        "R@1": 0.5238333333333334,
+        "R@10": 0.6136111111111111,
+        "n_index": 6000
+      },
+      "oracle": {
+        "R@1": 0.5481666666666667,
+        "R@10": 0.6213333333333333,
+        "n_index": 6000
+      },
+      "medoid": {
+        "minilm_l6": 0.48244444444444445,
+        "bge_small": 0.48255555555555557,
+        "bge_base": 0.4811111111111111,
+        "e5_base": 0.47994444444444445,
+        "gte_base": 0.48088888888888887
+      }
+    },
+    "bge_small": {
+      "full": {
+        "R@1": 0.5707777777777778,
+        "R@10": 0.6367222222222222,
+        "n_index": 46189
+      },
+      "random": {
+        "R@1": 0.4901111111111111,
+        "R@10": 0.5876111111111111,
+        "n_index": 6000
+      },
+      "centroid": {
+        "R@1": 0.5434444444444444,
+        "R@10": 0.6251111111111111,
+        "n_index": 6000
+      },
+      "oracle": {
+        "R@1": 0.5616666666666666,
+        "R@10": 0.6241666666666666,
+        "n_index": 6000
+      },
+      "medoid": {
+        "minilm_l6": 0.5060555555555556,
+        "bge_small": 0.5083333333333333,
+        "bge_base": 0.5068333333333334,
+        "e5_base": 0.5058333333333334,
+        "gte_base": 0.5068333333333334
+      }
+    },
+    "bge_base": {
+      "full": {
+        "R@1": 0.5621666666666667,
+        "R@10": 0.6313333333333333,
+        "n_index": 46189
+      },
+      "random": {
+        "R@1": 0.47738888888888886,
+        "R@10": 0.5799444444444445,
+        "n_index": 6000
+      },
+      "centroid": {
+        "R@1": 0.5414444444444444,
+        "R@10": 0.6229444444444444,
+        "n_index": 6000
+      },
+      "oracle": {
+        "R@1": 0.5617222222222222,
+        "R@10": 0.6263333333333333,
+        "n_index": 6000
+      },
+      "medoid": {
+        "minilm_l6": 0.49866666666666665,
+        "bge_small": 0.49922222222222223,
+        "bge_base": 0.5002777777777778,
+        "e5_base": 0.4976111111111111,
+        "gte_base": 0.49966666666666665
+      }
+    },
+    "e5_base": {
+      "full": {
+        "R@1": 0.5818333333333333,
+        "R@10": 0.6433888888888889,
+        "n_index": 46189
+      },
+      "random": {
+        "R@1": 0.5105,
+        "R@10": 0.5985,
+        "n_index": 6000
+      },
+      "centroid": {
+        "R@1": 0.5682222222222222,
+        "R@10": 0.6354444444444445,
+        "n_index": 6000
+      },
+      "oracle": {
+        "R@1": 0.5831666666666667,
+        "R@10": 0.6398888888888888,
+        "n_index": 6000
+      },
+      "medoid": {
+        "minilm_l6": 0.5256666666666666,
+        "bge_small": 0.527,
+        "bge_base": 0.5263888888888889,
+        "e5_base": 0.5249444444444444,
+        "gte_base": 0.5270555555555556
+      }
+    },
+    "gte_base": {
+      "full": {
+        "R@1": 0.5748888888888889,
+        "R@10": 0.6383888888888889,
+        "n_index": 46189
+      },
+      "random": {
+        "R@1": 0.5007222222222222,
+        "R@10": 0.5943888888888889,
+        "n_index": 6000
+      },
+      "centroid": {
+        "R@1": 0.5583333333333333,
+        "R@10": 0.6288888888888889,
+        "n_index": 6000
+      },
+      "oracle": {
+        "R@1": 0.5769444444444445,
+        "R@10": 0.6356666666666667,
+        "n_index": 6000
+      },
+      "medoid": {
+        "minilm_l6": 0.5186666666666667,
+        "bge_small": 0.5200555555555556,
+        "bge_base": 0.5198333333333334,
+        "e5_base": 0.5171666666666667,
+        "gte_base": 0.5197777777777778
+      }
+    }
+  },
+  "matrix_R@1": {
+    "minilm_l6": {
+      "minilm_l6": 0.48244444444444445,
+      "bge_small": 0.48255555555555557,
+      "bge_base": 0.4811111111111111,
+      "e5_base": 0.47994444444444445,
+      "gte_base": 0.48088888888888887
+    },
+    "bge_small": {
+      "minilm_l6": 0.5060555555555556,
+      "bge_small": 0.5083333333333333,
+      "bge_base": 0.5068333333333334,
+      "e5_base": 0.5058333333333334,
+      "gte_base": 0.5068333333333334
+    },
+    "bge_base": {
+      "minilm_l6": 0.49866666666666665,
+      "bge_small": 0.49922222222222223,
+      "bge_base": 0.5002777777777778,
+      "e5_base": 0.4976111111111111,
+      "gte_base": 0.49966666666666665
+    },
+    "e5_base": {
+      "minilm_l6": 0.5256666666666666,
+      "bge_small": 0.527,
+      "bge_base": 0.5263888888888889,
+      "e5_base": 0.5249444444444444,
+      "gte_base": 0.5270555555555556
+    },
+    "gte_base": {
+      "minilm_l6": 0.5186666666666667,
+      "bge_small": 0.5200555555555556,
+      "bge_base": 0.5198333333333334,
+      "e5_base": 0.5171666666666667,
+      "gte_base": 0.5197777777777778
+    }
+  },
+  "hit1": {},
+  "verdict": {
+    "C4a_compression_is_lossy": {
+      "per_eval": {
+        "minilm_l6": {
+          "oracle": 0.5481666666666667,
+          "full": 0.5546111111111112,
+          "oracle_minus_full": -0.0064,
+          "p": 0.000126,
+          "oracle_sig_beats_full": false
+        },
+        "bge_small": {
+          "oracle": 0.5616666666666666,
+          "full": 0.5707777777777778,
+          "oracle_minus_full": -0.0091,
+          "p": 9.54e-08,
+          "oracle_sig_beats_full": false
+        },
+        "bge_base": {
+          "oracle": 0.5617222222222222,
+          "full": 0.5621666666666667,
+          "oracle_minus_full": -0.0004,
+          "p": 0.814,
+          "oracle_sig_beats_full": false
+        },
+        "e5_base": {
+          "oracle": 0.5831666666666667,
+          "full": 0.5818333333333333,
+          "oracle_minus_full": 0.0013,
+          "p": 0.395,
+          "oracle_sig_beats_full": false
+        },
+        "gte_base": {
+          "oracle": 0.5769444444444445,
+          "full": 0.5748888888888889,
+          "oracle_minus_full": 0.0021,
+          "p": 0.21,
+          "oracle_sig_beats_full": false
+        }
+      },
+      "holds_everywhere": true,
+      "note": "Legacy field names retained for compatibility. The query-informed selector is not an upper bound. Failure to reject a difference is not equivalence, and these comparisons do not establish that all single-representative methods are lossy."
+    },
+    "C4b_noncircular_centrality": {
+      "n_offdiagonal_pairs": 20,
+      "n_beats_random_p<1e-3": 20,
+      "fraction": 1.0,
+      "robust": true,
+      "offdiag_tests": [
+        {
+          "eval": "minilm_l6",
+          "select": "bge_small",
+          "dR@1": 0.0192,
+          "p": 3.44e-15,
+          "beats_random": true
+        },
+        {
+          "eval": "minilm_l6",
+          "select": "bge_base",
+          "dR@1": 0.0177,
+          "p": 1.88e-13,
+          "beats_random": true
+        },
+        {
+          "eval": "minilm_l6",
+          "select": "e5_base",
+          "dR@1": 0.0166,
+          "p": 9.81e-12,
+          "beats_random": true
+        },
+        {
+          "eval": "minilm_l6",
+          "select": "gte_base",
+          "dR@1": 0.0175,
+          "p": 6.97e-13,
+          "beats_random": true
+        },
+        {
+          "eval": "bge_small",
+          "select": "minilm_l6",
+          "dR@1": 0.0159,
+          "p": 5.14e-12,
+          "beats_random": true
+        },
+        {
+          "eval": "bge_small",
+          "select": "bge_base",
+          "dR@1": 0.0167,
+          "p": 5.04e-13,
+          "beats_random": true
+        },
+        {
+          "eval": "bge_small",
+          "select": "e5_base",
+          "dR@1": 0.0157,
+          "p": 1.04e-11,
+          "beats_random": true
+        },
+        {
+          "eval": "bge_small",
+          "select": "gte_base",
+          "dR@1": 0.0167,
+          "p": 7.72e-13,
+          "beats_random": true
+        },
+        {
+          "eval": "bge_base",
+          "select": "minilm_l6",
+          "dR@1": 0.0213,
+          "p": 6.05e-19,
+          "beats_random": true
+        },
+        {
+          "eval": "bge_base",
+          "select": "bge_small",
+          "dR@1": 0.0218,
+          "p": 5.41e-20,
+          "beats_random": true
+        },
+        {
+          "eval": "bge_base",
+          "select": "e5_base",
+          "dR@1": 0.0202,
+          "p": 2.43e-17,
+          "beats_random": true
+        },
+        {
+          "eval": "bge_base",
+          "select": "gte_base",
+          "dR@1": 0.0223,
+          "p": 1.24e-20,
+          "beats_random": true
+        },
+        {
+          "eval": "e5_base",
+          "select": "minilm_l6",
+          "dR@1": 0.0152,
+          "p": 1.07e-11,
+          "beats_random": true
+        },
+        {
+          "eval": "e5_base",
+          "select": "bge_small",
+          "dR@1": 0.0165,
+          "p": 2.21e-13,
+          "beats_random": true
+        },
+        {
+          "eval": "e5_base",
+          "select": "bge_base",
+          "dR@1": 0.0159,
+          "p": 1.34e-12,
+          "beats_random": true
+        },
+        {
+          "eval": "e5_base",
+          "select": "gte_base",
+          "dR@1": 0.0166,
+          "p": 1.8e-13,
+          "beats_random": true
+        },
+        {
+          "eval": "gte_base",
+          "select": "minilm_l6",
+          "dR@1": 0.0179,
+          "p": 3.88e-15,
+          "beats_random": true
+        },
+        {
+          "eval": "gte_base",
+          "select": "bge_small",
+          "dR@1": 0.0193,
+          "p": 5.5e-17,
+          "beats_random": true
+        },
+        {
+          "eval": "gte_base",
+          "select": "bge_base",
+          "dR@1": 0.0191,
+          "p": 5.9e-17,
+          "beats_random": true
+        },
+        {
+          "eval": "gte_base",
+          "select": "e5_base",
+          "dR@1": 0.0164,
+          "p": 1.43e-12,
+          "beats_random": true
+        }
+      ],
+      "note": "Query-level exploratory McNemar tests. Three queries share each entity, and matrix cells share queries/models. The legacy robust field is not an entity-level uncertainty estimate or evidence of universal transfer."
+    },
+    "intra_entity_dispersion": {
+      "mean": 0.1718,
+      "median": 0.049,
+      "note": "1 - mean pairwise cosine among an entity's pool vectors (MiniLM space). Descriptive within-entity variation; two datasets do not isolate it as the causal mechanism."
+    }
+  }
+}

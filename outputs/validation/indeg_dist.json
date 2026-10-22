@@ -1,0 +1,26 @@
+{
+  "config": {
+    "corpus": "WDC-clean unique base",
+    "n_base": 60000,
+    "d": 384,
+    "sink_frac": 0.3,
+    "sink_size": 18000
+  },
+  "clean": {
+    "max_indeg": 88,
+    "mean": 18.86,
+    "p99": 49,
+    "gini": 0.2723,
+    "top0.01pct_edge_share": 0.0004,
+    "top1pct_edge_share": 0.0293
+  },
+  "collapsed": {
+    "max_indeg": 17959,
+    "mean": 20.56,
+    "p99": 69,
+    "gini": 0.3902,
+    "top0.01pct_edge_share": 0.052,
+    "top1pct_edge_share": 0.0929
+  },
+  "interpretation": "The mechanism is a degenerate clique, not a uniform shift. Clean HNSW in-degree has a bounded tail (max ~O(M), low Gini); adding one exact-duplicate sink produces a single node whose in-degree is orders of magnitude larger, and a tiny fraction of nodes captures a large share of all incoming edges (Gini jumps; top-0.01% edge share spikes). This is what the scalar max-in-degree summarizes and what collapses greedy navigation."
+}

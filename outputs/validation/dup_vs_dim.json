@@ -1,0 +1,157 @@
+{
+  "config": {
+    "DFIX": 128,
+    "N_BASE": 20000,
+    "K": 10,
+    "EF": 200,
+    "NPROBE": 64,
+    "SEED": 0,
+    "sink_frac": [
+      0.0,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.35,
+      0.5
+    ],
+    "d_intrinsic": [
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128
+    ]
+  },
+  "arm1_duplication": [
+    {
+      "sink_frac": 0.0,
+      "n": 20000,
+      "hnsw": 0.9754,
+      "ivf": 0.8374,
+      "max_indeg": 55,
+      "hub_skew": 0.191
+    },
+    {
+      "sink_frac": 0.02,
+      "n": 20400,
+      "hnsw": 0.8966,
+      "ivf": 0.834,
+      "max_indeg": 988,
+      "hub_skew": -1.84
+    },
+    {
+      "sink_frac": 0.05,
+      "n": 21000,
+      "hnsw": 0.838,
+      "ivf": 0.8307,
+      "max_indeg": 1872,
+      "hub_skew": -1.725
+    },
+    {
+      "sink_frac": 0.1,
+      "n": 22000,
+      "hnsw": 0.8422,
+      "ivf": 0.8229,
+      "max_indeg": 2039,
+      "hub_skew": -1.739
+    },
+    {
+      "sink_frac": 0.2,
+      "n": 24000,
+      "hnsw": 0.6805,
+      "ivf": 0.8135,
+      "max_indeg": 4703,
+      "hub_skew": -1.109
+    },
+    {
+      "sink_frac": 0.35,
+      "n": 27000,
+      "hnsw": 0.6799,
+      "ivf": 0.7993,
+      "max_indeg": 6960,
+      "hub_skew": -1.102
+    },
+    {
+      "sink_frac": 0.5,
+      "n": 30000,
+      "hnsw": 0.6793,
+      "ivf": 0.7853,
+      "max_indeg": 9978,
+      "hub_skew": -1.094
+    }
+  ],
+  "arm2_dimensionality": [
+    {
+      "d_intrinsic": 2,
+      "n": 20000,
+      "hnsw": 0.9573,
+      "ivf": 0.9577,
+      "max_indeg": 28,
+      "hub_skew": 1.782
+    },
+    {
+      "d_intrinsic": 4,
+      "n": 20000,
+      "hnsw": 1.0,
+      "ivf": 1.0,
+      "max_indeg": 48,
+      "hub_skew": 1.709
+    },
+    {
+      "d_intrinsic": 8,
+      "n": 20000,
+      "hnsw": 1.0,
+      "ivf": 1.0,
+      "max_indeg": 49,
+      "hub_skew": 0.892
+    },
+    {
+      "d_intrinsic": 16,
+      "n": 20000,
+      "hnsw": 1.0,
+      "ivf": 0.9998,
+      "max_indeg": 54,
+      "hub_skew": 0.541
+    },
+    {
+      "d_intrinsic": 32,
+      "n": 20000,
+      "hnsw": 1.0,
+      "ivf": 0.9951,
+      "max_indeg": 49,
+      "hub_skew": 0.272
+    },
+    {
+      "d_intrinsic": 64,
+      "n": 20000,
+      "hnsw": 0.9997,
+      "ivf": 0.9843,
+      "max_indeg": 53,
+      "hub_skew": 0.21
+    },
+    {
+      "d_intrinsic": 128,
+      "n": 20000,
+      "hnsw": 0.9986,
+      "ivf": 0.9658,
+      "max_indeg": 63,
+      "hub_skew": 0.271
+    }
+  ],
+  "verdict": {
+    "arm1_duplication_indeg_recall_spearman": -0.964,
+    "arm1_duplication_p": 0.000454,
+    "arm1_pushes_indeg_high_and_recall_low": true,
+    "arm2_dim_keeps_indeg_low": true,
+    "arm2_dim_keeps_recall_high": true,
+    "arm1_max_indeg": 9978,
+    "arm1_min_recall": 0.6793,
+    "arm2_max_indeg": 63,
+    "arm2_min_recall": 0.9573,
+    "separation_holds": true,
+    "interpretation": "separation_holds=True means: DUPLICATION drives max-in-degree high and HNSW recall low (our mechanism), while pure INTRINSIC DIMENSIONALITY (no dups) keeps natural max-in-degree LOW and recall HIGH over the reachable range. The collapse is governed by ABSOLUTE max-in-degree (inflated by duplication), NOT by dimensionality -- the clean separation from PACMMOD 2026 hubness."
+  }
+}

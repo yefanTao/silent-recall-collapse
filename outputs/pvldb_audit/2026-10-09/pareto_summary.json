@@ -1,0 +1,89 @@
+{
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "threads": 8,
+  "timing_statistic": "median_of_three",
+  "total_seconds": 289.31780890000005,
+  "peak_rss_gib": 8.89992904663086,
+  "conditions": {
+    "full_hnsw": {
+      "n": 947584,
+      "index_mb": 1592.196602,
+      "hit10_at_ef256": [
+        0.7541,
+        0.7857
+      ],
+      "qps_at_ef256": [
+        15822.1,
+        18318.4
+      ],
+      "hit10_at_ef16": [
+        0.6188,
+        0.6599
+      ],
+      "qps_at_ef16": [
+        133135.3,
+        157718.8
+      ]
+    },
+    "dedup_hnsw": {
+      "n": 220164,
+      "index_mb": 369.927658,
+      "hit10_at_ef256": [
+        0.8853,
+        0.8856
+      ],
+      "qps_at_ef256": [
+        11041.6,
+        11208.8
+      ],
+      "hit10_at_ef16": [
+        0.8611,
+        0.866
+      ],
+      "qps_at_ef16": [
+        103364.5,
+        123241.5
+      ]
+    },
+    "reduced_hnsw": {
+      "n": 65078,
+      "index_mb": 109.344578,
+      "hit10_at_ef256": [
+        0.8606,
+        0.8608
+      ],
+      "qps_at_ef256": [
+        14830.9,
+        19020.8
+      ],
+      "hit10_at_ef16": [
+        0.833,
+        0.8377
+      ],
+      "qps_at_ef16": [
+        142031.2,
+        177985.3
+      ]
+    }
+  },
+  "matched_ef_reduced_over_full_qps": [
+    0.9199229337356291,
+    1.1284976806823284
+  ],
+  "lowest_reduced_over_highest_full_qps": [
+    8.91014027251512,
+    9.716203380207878
+  ],
+  "raw_checksums": {
+    "outputs/pvldb_audit/2026-10-09/pareto/pareto_dedup.json": "bbdf821020a339bf5f9018cb03f70d95b745be8b9bd51b2a1bda6f6f43ec3249",
+    "outputs/pvldb_audit/2026-10-09/pareto/runtime.json": "491fb2c5115dc208e3afe60f552e1c5daece347b99c9085b792425174d34e118",
+    "outputs/pvldb_audit/2026-10-09/pareto_seed1/pareto_dedup.json": "a37012c58531f8b049f32fcfd8e1b510fb5303dcc0e0e0c67e694d2a442a2511",
+    "outputs/pvldb_audit/2026-10-09/pareto_seed1/runtime.json": "9d8d6943598e3310171730a2dc8b867feba8f6ad630e0aa21aeae451d2ce5d6d",
+    "outputs/pvldb_audit/2026-10-09/pareto_seed2/pareto_dedup.json": "eda14c16910bfa8915ce92cdf7f48337a6bb3e0ba3cbe9237059d9bb02db0135",
+    "outputs/pvldb_audit/2026-10-09/pareto_seed2/runtime.json": "d0ded67a0c9b526d968935a64ec0725d9f75cfb5aa45471e8fa0bb2a4afde4b0"
+  }
+}

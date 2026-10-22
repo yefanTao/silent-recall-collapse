@@ -1,0 +1,402 @@
+{
+  "config": {
+    "dataset": "musicbrainz",
+    "N_TEST": 6000,
+    "N_Q": 3,
+    "MAX_POOL": 50,
+    "SEED": 43,
+    "n_entities": 6000,
+    "n_queries": 18000,
+    "spaces": [
+      "minilm_l6",
+      "bge_small",
+      "bge_base",
+      "e5_base",
+      "gte_base"
+    ],
+    "ground_truth": "cluster_id",
+    "search": "exact entity-level max-IP"
+  },
+  "per_eval": {
+    "minilm_l6": {
+      "full": {
+        "R@1": 0.9777222222222223,
+        "R@10": 0.9883888888888889,
+        "n_index": 12000
+      },
+      "random": {
+        "R@1": 0.9598333333333333,
+        "R@10": 0.9792222222222222,
+        "n_index": 6000
+      },
+      "centroid": {
+        "R@1": 0.9831666666666666,
+        "R@10": 0.9915555555555555,
+        "n_index": 6000
+      },
+      "oracle": {
+        "R@1": 0.9859444444444444,
+        "R@10": 0.9925,
+        "n_index": 6000
+      },
+      "medoid": {
+        "minilm_l6": 0.9591111111111111,
+        "bge_small": 0.9591111111111111,
+        "bge_base": 0.9591111111111111,
+        "e5_base": 0.9591111111111111,
+        "gte_base": 0.9591111111111111
+      }
+    },
+    "bge_small": {
+      "full": {
+        "R@1": 0.9897222222222222,
+        "R@10": 0.9943888888888889,
+        "n_index": 12000
+      },
+      "random": {
+        "R@1": 0.9802777777777778,
+        "R@10": 0.9884444444444445,
+        "n_index": 6000
+      },
+      "centroid": {
+        "R@1": 0.9886666666666667,
+        "R@10": 0.9941111111111111,
+        "n_index": 6000
+      },
+      "oracle": {
+        "R@1": 0.9923888888888889,
+        "R@10": 0.9958333333333333,
+        "n_index": 6000
+      },
+      "medoid": {
+        "minilm_l6": 0.9795555555555555,
+        "bge_small": 0.9795555555555555,
+        "bge_base": 0.9795555555555555,
+        "e5_base": 0.9795555555555555,
+        "gte_base": 0.9795555555555555
+      }
+    },
+    "bge_base": {
+      "full": {
+        "R@1": 0.9862222222222222,
+        "R@10": 0.9929444444444444,
+        "n_index": 12000
+      },
+      "random": {
+        "R@1": 0.9745,
+        "R@10": 0.9855555555555555,
+        "n_index": 6000
+      },
+      "centroid": {
+        "R@1": 0.9867222222222222,
+        "R@10": 0.9931666666666666,
+        "n_index": 6000
+      },
+      "oracle": {
+        "R@1": 0.9907222222222222,
+        "R@10": 0.9955555555555555,
+        "n_index": 6000
+      },
+      "medoid": {
+        "minilm_l6": 0.9752777777777778,
+        "bge_small": 0.9752777777777778,
+        "bge_base": 0.9752777777777778,
+        "e5_base": 0.9752777777777778,
+        "gte_base": 0.9752777777777778
+      }
+    },
+    "e5_base": {
+      "full": {
+        "R@1": 0.9924444444444445,
+        "R@10": 0.9955555555555555,
+        "n_index": 12000
+      },
+      "random": {
+        "R@1": 0.9844444444444445,
+        "R@10": 0.9927222222222222,
+        "n_index": 6000
+      },
+      "centroid": {
+        "R@1": 0.9926666666666667,
+        "R@10": 0.9958888888888889,
+        "n_index": 6000
+      },
+      "oracle": {
+        "R@1": 0.9945555555555555,
+        "R@10": 0.9971111111111111,
+        "n_index": 6000
+      },
+      "medoid": {
+        "minilm_l6": 0.9832222222222222,
+        "bge_small": 0.9832222222222222,
+        "bge_base": 0.9832222222222222,
+        "e5_base": 0.9832222222222222,
+        "gte_base": 0.9832222222222222
+      }
+    },
+    "gte_base": {
+      "full": {
+        "R@1": 0.9927222222222222,
+        "R@10": 0.9954444444444445,
+        "n_index": 12000
+      },
+      "random": {
+        "R@1": 0.9854444444444445,
+        "R@10": 0.9915555555555555,
+        "n_index": 6000
+      },
+      "centroid": {
+        "R@1": 0.9921666666666666,
+        "R@10": 0.9955,
+        "n_index": 6000
+      },
+      "oracle": {
+        "R@1": 0.9948333333333333,
+        "R@10": 0.9977777777777778,
+        "n_index": 6000
+      },
+      "medoid": {
+        "minilm_l6": 0.9846666666666667,
+        "bge_small": 0.9846666666666667,
+        "bge_base": 0.9846666666666667,
+        "e5_base": 0.9846666666666667,
+        "gte_base": 0.9846666666666667
+      }
+    }
+  },
+  "matrix_R@1": {
+    "minilm_l6": {
+      "minilm_l6": 0.9591111111111111,
+      "bge_small": 0.9591111111111111,
+      "bge_base": 0.9591111111111111,
+      "e5_base": 0.9591111111111111,
+      "gte_base": 0.9591111111111111
+    },
+    "bge_small": {
+      "minilm_l6": 0.9795555555555555,
+      "bge_small": 0.9795555555555555,
+      "bge_base": 0.9795555555555555,
+      "e5_base": 0.9795555555555555,
+      "gte_base": 0.9795555555555555
+    },
+    "bge_base": {
+      "minilm_l6": 0.9752777777777778,
+      "bge_small": 0.9752777777777778,
+      "bge_base": 0.9752777777777778,
+      "e5_base": 0.9752777777777778,
+      "gte_base": 0.9752777777777778
+    },
+    "e5_base": {
+      "minilm_l6": 0.9832222222222222,
+      "bge_small": 0.9832222222222222,
+      "bge_base": 0.9832222222222222,
+      "e5_base": 0.9832222222222222,
+      "gte_base": 0.9832222222222222
+    },
+    "gte_base": {
+      "minilm_l6": 0.9846666666666667,
+      "bge_small": 0.9846666666666667,
+      "bge_base": 0.9846666666666667,
+      "e5_base": 0.9846666666666667,
+      "gte_base": 0.9846666666666667
+    }
+  },
+  "hit1": {},
+  "verdict": {
+    "C4a_compression_is_lossy": {
+      "per_eval": {
+        "minilm_l6": {
+          "oracle": 0.9859444444444444,
+          "full": 0.9777222222222223,
+          "oracle_minus_full": 0.0082,
+          "p": 4.79e-36,
+          "oracle_sig_beats_full": true
+        },
+        "bge_small": {
+          "oracle": 0.9923888888888889,
+          "full": 0.9897222222222222,
+          "oracle_minus_full": 0.0027,
+          "p": 6.12e-13,
+          "oracle_sig_beats_full": true
+        },
+        "bge_base": {
+          "oracle": 0.9907222222222222,
+          "full": 0.9862222222222222,
+          "oracle_minus_full": 0.0045,
+          "p": 1.42e-21,
+          "oracle_sig_beats_full": true
+        },
+        "e5_base": {
+          "oracle": 0.9945555555555555,
+          "full": 0.9924444444444445,
+          "oracle_minus_full": 0.0021,
+          "p": 7.28e-12,
+          "oracle_sig_beats_full": true
+        },
+        "gte_base": {
+          "oracle": 0.9948333333333333,
+          "full": 0.9927222222222222,
+          "oracle_minus_full": 0.0021,
+          "p": 7.46e-11,
+          "oracle_sig_beats_full": true
+        }
+      },
+      "holds_everywhere": false,
+      "note": "Legacy field names retained for compatibility. The query-informed selector is not an upper bound. Failure to reject a difference is not equivalence, and these comparisons do not establish that all single-representative methods are lossy."
+    },
+    "C4b_noncircular_centrality": {
+      "n_offdiagonal_pairs": 20,
+      "n_beats_random_p<1e-3": 0,
+      "fraction": 0.0,
+      "robust": false,
+      "offdiag_tests": [
+        {
+          "eval": "minilm_l6",
+          "select": "bge_small",
+          "dR@1": -0.0007,
+          "p": 0.56,
+          "beats_random": false
+        },
+        {
+          "eval": "minilm_l6",
+          "select": "bge_base",
+          "dR@1": -0.0007,
+          "p": 0.56,
+          "beats_random": false
+        },
+        {
+          "eval": "minilm_l6",
+          "select": "e5_base",
+          "dR@1": -0.0007,
+          "p": 0.56,
+          "beats_random": false
+        },
+        {
+          "eval": "minilm_l6",
+          "select": "gte_base",
+          "dR@1": -0.0007,
+          "p": 0.56,
+          "beats_random": false
+        },
+        {
+          "eval": "bge_small",
+          "select": "minilm_l6",
+          "dR@1": -0.0007,
+          "p": 0.443,
+          "beats_random": false
+        },
+        {
+          "eval": "bge_small",
+          "select": "bge_base",
+          "dR@1": -0.0007,
+          "p": 0.443,
+          "beats_random": false
+        },
+        {
+          "eval": "bge_small",
+          "select": "e5_base",
+          "dR@1": -0.0007,
+          "p": 0.443,
+          "beats_random": false
+        },
+        {
+          "eval": "bge_small",
+          "select": "gte_base",
+          "dR@1": -0.0007,
+          "p": 0.443,
+          "beats_random": false
+        },
+        {
+          "eval": "bge_base",
+          "select": "minilm_l6",
+          "dR@1": 0.0008,
+          "p": 0.434,
+          "beats_random": false
+        },
+        {
+          "eval": "bge_base",
+          "select": "bge_small",
+          "dR@1": 0.0008,
+          "p": 0.434,
+          "beats_random": false
+        },
+        {
+          "eval": "bge_base",
+          "select": "e5_base",
+          "dR@1": 0.0008,
+          "p": 0.434,
+          "beats_random": false
+        },
+        {
+          "eval": "bge_base",
+          "select": "gte_base",
+          "dR@1": 0.0008,
+          "p": 0.434,
+          "beats_random": false
+        },
+        {
+          "eval": "e5_base",
+          "select": "minilm_l6",
+          "dR@1": -0.0012,
+          "p": 0.135,
+          "beats_random": false
+        },
+        {
+          "eval": "e5_base",
+          "select": "bge_small",
+          "dR@1": -0.0012,
+          "p": 0.135,
+          "beats_random": false
+        },
+        {
+          "eval": "e5_base",
+          "select": "bge_base",
+          "dR@1": -0.0012,
+          "p": 0.135,
+          "beats_random": false
+        },
+        {
+          "eval": "e5_base",
+          "select": "gte_base",
+          "dR@1": -0.0012,
+          "p": 0.135,
+          "beats_random": false
+        },
+        {
+          "eval": "gte_base",
+          "select": "minilm_l6",
+          "dR@1": -0.0008,
+          "p": 0.324,
+          "beats_random": false
+        },
+        {
+          "eval": "gte_base",
+          "select": "bge_small",
+          "dR@1": -0.0008,
+          "p": 0.324,
+          "beats_random": false
+        },
+        {
+          "eval": "gte_base",
+          "select": "bge_base",
+          "dR@1": -0.0008,
+          "p": 0.324,
+          "beats_random": false
+        },
+        {
+          "eval": "gte_base",
+          "select": "e5_base",
+          "dR@1": -0.0008,
+          "p": 0.324,
+          "beats_random": false
+        }
+      ],
+      "note": "Query-level exploratory McNemar tests. Three queries share each entity, and matrix cells share queries/models. The legacy robust field is not an entity-level uncertainty estimate or evidence of universal transfer."
+    },
+    "intra_entity_dispersion": {
+      "mean": 0.1577,
+      "median": 0.1319,
+      "note": "1 - mean pairwise cosine among an entity's pool vectors (MiniLM space). Descriptive within-entity variation; two datasets do not isolate it as the causal mechanism."
+    }
+  }
+}

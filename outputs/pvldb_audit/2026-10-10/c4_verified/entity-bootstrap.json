@@ -1,0 +1,1128 @@
+{
+  "method": "paired entity-cluster percentile bootstrap",
+  "bootstrap_replicates": 100000,
+  "rng_seed": 20261010,
+  "primary_family_size": 80,
+  "primary_family": "20 off-diagonal contrasts x 2 datasets x 2 splits (default 80)",
+  "multiplicity": "Bonferroni 95% family intervals across 80 primary comparisons",
+  "limitations": [
+    "Bootstrap coverage is approximate",
+    "Conditional on the sampled split and model revisions",
+    "A positive interval does not imply transfer to other corpora or models"
+  ],
+  "datasets": {
+    "wdc": {
+      "seed": 42,
+      "entities": 6000,
+      "queries": 18000,
+      "paired_hits_sha256": "0dc4314927720275ac7411ed442878154425d74babfc6cc40c83a3c943a8cf81",
+      "offdiagonal": [
+        {
+          "eval": "minilm_l6",
+          "selection": "bge_small",
+          "delta_R@1": 0.022277777777777782,
+          "ci95": [
+            0.016111111111101997,
+            0.028444444444435665
+          ],
+          "family_ci": [
+            0.011402760416655888,
+            0.03322222222221079
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 638,
+          "entities_worsened": 381,
+          "entities_tied": 4981
+        },
+        {
+          "eval": "minilm_l6",
+          "selection": "bge_base",
+          "delta_R@1": 0.022777777777777775,
+          "ci95": [
+            0.016666666666657837,
+            0.028888888888880995
+          ],
+          "family_ci": [
+            0.012069427083325434,
+            0.033222222222213625
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 631,
+          "entities_worsened": 372,
+          "entities_tied": 4997
+        },
+        {
+          "eval": "minilm_l6",
+          "selection": "e5_base",
+          "delta_R@1": 0.022111111111111113,
+          "ci95": [
+            0.015999999999991,
+            0.02827777777777
+          ],
+          "family_ci": [
+            0.011569427083325347,
+            0.032999999999992126
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 635,
+          "entities_worsened": 378,
+          "entities_tied": 4987
+        },
+        {
+          "eval": "minilm_l6",
+          "selection": "gte_base",
+          "delta_R@1": 0.022444444444444447,
+          "ci95": [
+            0.016277777777767503,
+            0.02861111111110217
+          ],
+          "family_ci": [
+            0.011944444444433044,
+            0.03294444444443492
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 635,
+          "entities_worsened": 375,
+          "entities_tied": 4990
+        },
+        {
+          "eval": "bge_small",
+          "selection": "minilm_l6",
+          "delta_R@1": 0.023833333333333335,
+          "ci95": [
+            0.017888888888883004,
+            0.029833333333324035
+          ],
+          "family_ci": [
+            0.013402760416663178,
+            0.03415279513888319
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 600,
+          "entities_worsened": 347,
+          "entities_tied": 5053
+        },
+        {
+          "eval": "bge_small",
+          "selection": "bge_base",
+          "delta_R@1": 0.024166666666666666,
+          "ci95": [
+            0.018277777777773504,
+            0.03011111111110584
+          ],
+          "family_ci": [
+            0.013958315972218305,
+            0.03433333333332654
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 584,
+          "entities_worsened": 329,
+          "entities_tied": 5087
+        },
+        {
+          "eval": "bge_small",
+          "selection": "e5_base",
+          "delta_R@1": 0.02288888888888889,
+          "ci95": [
+            0.01694444444443817,
+            0.02883333333332616
+          ],
+          "family_ci": [
+            0.012513871527772473,
+            0.03349999999999213
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 591,
+          "entities_worsened": 344,
+          "entities_tied": 5065
+        },
+        {
+          "eval": "bge_small",
+          "selection": "gte_base",
+          "delta_R@1": 0.02322222222222222,
+          "ci95": [
+            0.01727777777777166,
+            0.02916666666666151
+          ],
+          "family_ci": [
+            0.013111111111105203,
+            0.03361111111110746
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 586,
+          "entities_worsened": 338,
+          "entities_tied": 5076
+        },
+        {
+          "eval": "bge_base",
+          "selection": "minilm_l6",
+          "delta_R@1": 0.021944444444444447,
+          "ci95": [
+            0.01594444444443683,
+            0.027944444444438506
+          ],
+          "family_ci": [
+            0.011222222222216706,
+            0.03238888888888013
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 612,
+          "entities_worsened": 364,
+          "entities_tied": 5024
+        },
+        {
+          "eval": "bge_base",
+          "selection": "bge_small",
+          "delta_R@1": 0.022333333333333334,
+          "ci95": [
+            0.016277777777771656,
+            0.028388888888883496
+          ],
+          "family_ci": [
+            0.011833333333324831,
+            0.032986128472215014
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 605,
+          "entities_worsened": 356,
+          "entities_tied": 5039
+        },
+        {
+          "eval": "bge_base",
+          "selection": "e5_base",
+          "delta_R@1": 0.022333333333333334,
+          "ci95": [
+            0.016277777777769502,
+            0.028388888888881674
+          ],
+          "family_ci": [
+            0.011666666666657579,
+            0.032944444444434375
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 607,
+          "entities_worsened": 358,
+          "entities_tied": 5035
+        },
+        {
+          "eval": "bge_base",
+          "selection": "gte_base",
+          "delta_R@1": 0.02255555555555555,
+          "ci95": [
+            0.01644444444443849,
+            0.028666666666656508
+          ],
+          "family_ci": [
+            0.011777777777769173,
+            0.03325003472221111
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 614,
+          "entities_worsened": 361,
+          "entities_tied": 5025
+        },
+        {
+          "eval": "e5_base",
+          "selection": "minilm_l6",
+          "delta_R@1": 0.019833333333333335,
+          "ci95": [
+            0.013999999999997337,
+            0.02566666666665967
+          ],
+          "family_ci": [
+            0.009513871527771854,
+            0.029875017361103887
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 541,
+          "entities_worsened": 334,
+          "entities_tied": 5125
+        },
+        {
+          "eval": "e5_base",
+          "selection": "bge_small",
+          "delta_R@1": 0.018666666666666668,
+          "ci95": [
+            0.012888888888884172,
+            0.024499999999996504
+          ],
+          "family_ci": [
+            0.008569427083330217,
+            0.029041684027772886
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 529,
+          "entities_worsened": 346,
+          "entities_tied": 5125
+        },
+        {
+          "eval": "e5_base",
+          "selection": "bge_base",
+          "delta_R@1": 0.02033333333333333,
+          "ci95": [
+            0.014444444444440005,
+            0.02616666666666334
+          ],
+          "family_ci": [
+            0.010333333333327326,
+            0.030916701388882778
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 540,
+          "entities_worsened": 333,
+          "entities_tied": 5127
+        },
+        {
+          "eval": "e5_base",
+          "selection": "gte_base",
+          "delta_R@1": 0.018222222222222223,
+          "ci95": [
+            0.012388888888884172,
+            0.02411111111110617
+          ],
+          "family_ci": [
+            0.008069427083327549,
+            0.028611111111106546
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 529,
+          "entities_worsened": 345,
+          "entities_tied": 5126
+        },
+        {
+          "eval": "gte_base",
+          "selection": "minilm_l6",
+          "delta_R@1": 0.022277777777777775,
+          "ci95": [
+            0.016388888888884495,
+            0.028166666666661504
+          ],
+          "family_ci": [
+            0.012124982638883104,
+            0.03266666666666312
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 574,
+          "entities_worsened": 341,
+          "entities_tied": 5085
+        },
+        {
+          "eval": "gte_base",
+          "selection": "bge_small",
+          "delta_R@1": 0.022388888888888885,
+          "ci95": [
+            0.016444444444438995,
+            0.028333333333328173
+          ],
+          "family_ci": [
+            0.011958315972218058,
+            0.03294444444443784
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 575,
+          "entities_worsened": 340,
+          "entities_tied": 5085
+        },
+        {
+          "eval": "gte_base",
+          "selection": "bge_base",
+          "delta_R@1": 0.024111111111111114,
+          "ci95": [
+            0.01822222222221684,
+            0.03005555555554883
+          ],
+          "family_ci": [
+            0.01377777777777212,
+            0.034597239583325674
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 579,
+          "entities_worsened": 325,
+          "entities_tied": 5096
+        },
+        {
+          "eval": "gte_base",
+          "selection": "e5_base",
+          "delta_R@1": 0.021833333333333333,
+          "ci95": [
+            0.015944444444439328,
+            0.02777777777776868
+          ],
+          "family_ci": [
+            0.011499999999994247,
+            0.03209723958332835
+          ],
+          "family_size": 80,
+          "positive_family_interval": true,
+          "entities_improved": 572,
+          "entities_worsened": 345,
+          "entities_tied": 5083
+        }
+      ],
+      "secondary_vs_full": [
+        {
+          "eval": "minilm_l6",
+          "method": "oracle",
+          "delta_R@1": -0.0041111111111111105,
+          "ci95": [
+            -0.007833333333324496,
+            -0.0003888888888846651
+          ],
+          "family_ci": [
+            -0.010222222222212087,
+            0.002111111111113748
+          ],
+          "family_size": 40,
+          "positive_family_interval": false,
+          "entities_improved": 317,
+          "entities_worsened": 411,
+          "entities_tied": 5272
+        },
+        {
+          "eval": "minilm_l6",
+          "method": "centroid",
+          "delta_R@1": -0.026555555555555558,
+          "ci95": [
+            -0.031722222222227835,
+            -0.02144444444445067
+          ],
+          "family_ci": [
+            -0.03502781250000514,
+            -0.018194409722228334
+          ],
+          "family_size": 40,
+          "positive_family_interval": false,
+          "entities_improved": 299,
+          "entities_worsened": 542,
+          "entities_tied": 5159
+        },
+        {
+          "eval": "bge_small",
+          "method": "oracle",
+          "delta_R@1": -0.00022222222222222277,
+          "ci95": [
+            -0.0038888888888818324,
+            0.0033888888888931657
+          ],
+          "family_ci": [
+            -0.006222222222214252,
+            0.005833333333335248
+          ],
+          "family_size": 40,
+          "positive_family_interval": false,
+          "entities_improved": 329,
+          "entities_worsened": 359,
+          "entities_tied": 5312
+        },
+        {
+          "eval": "bge_small",
+          "method": "centroid",
+          "delta_R@1": -0.020944444444444446,
+          "ci95": [
+            -0.02577777777778467,
+            -0.016111111111113994
+          ],
+          "family_ci": [
+            -0.02886114583333672,
+            -0.012833333333340668
+          ],
+          "family_size": 40,
+          "positive_family_interval": false,
+          "entities_improved": 276,
+          "entities_worsened": 467,
+          "entities_tied": 5257
+        },
+        {
+          "eval": "bge_base",
+          "method": "oracle",
+          "delta_R@1": 0.0022222222222222222,
+          "ci95": [
+            -0.0013333333333266685,
+            0.005777777777780837
+          ],
+          "family_ci": [
+            -0.003527812499992138,
+            0.0080000000000015
+          ],
+          "family_size": 40,
+          "positive_family_interval": false,
+          "entities_improved": 350,
+          "entities_worsened": 359,
+          "entities_tied": 5291
+        },
+        {
+          "eval": "bge_base",
+          "method": "centroid",
+          "delta_R@1": -0.016888888888888887,
+          "ci95": [
+            -0.021944444444448,
+            -0.011888888888894831
+          ],
+          "family_ci": [
+            -0.02522222222222717,
+            -0.008833333333340748
+          ],
+          "family_size": 40,
+          "positive_family_interval": false,
+          "entities_improved": 319,
+          "entities_worsened": 462,
+          "entities_tied": 5219
+        },
+        {
+          "eval": "e5_base",
+          "method": "oracle",
+          "delta_R@1": 0.003444444444444444,
+          "ci95": [
+            0.0003333333333361684,
+            0.006555555555555166
+          ],
+          "family_ci": [
+            -0.0015278124999967208,
+            0.008611111111111418
+          ],
+          "family_size": 40,
+          "positive_family_interval": false,
+          "entities_improved": 283,
+          "entities_worsened": 253,
+          "entities_tied": 5464
+        },
+        {
+          "eval": "e5_base",
+          "method": "centroid",
+          "delta_R@1": -0.008388888888888888,
+          "ci95": [
+            -0.012611111111114999,
+            -0.00422222222222833
+          ],
+          "family_ci": [
+            -0.015333333333338837,
+            -0.0016111111111182528
+          ],
+          "family_size": 40,
+          "positive_family_interval": false,
+          "entities_improved": 260,
+          "entities_worsened": 307,
+          "entities_tied": 5433
+        },
+        {
+          "eval": "gte_base",
+          "method": "oracle",
+          "delta_R@1": 0.0065,
+          "ci95": [
+            0.0030555555555550006,
+            0.009999999999998503
+          ],
+          "family_ci": [
+            0.000833333333333333,
+            0.012388888888888085
+          ],
+          "family_size": 40,
+          "positive_family_interval": true,
+          "entities_improved": 366,
+          "entities_worsened": 294,
+          "entities_tied": 5340
+        },
+        {
+          "eval": "gte_base",
+          "method": "centroid",
+          "delta_R@1": -0.013055555555555555,
+          "ci95": [
+            -0.017611111111116833,
+            -0.0086111111111175
+          ],
+          "family_ci": [
+            -0.020583368055563305,
+            -0.005944444444449418
+          ],
+          "family_size": 40,
+          "positive_family_interval": false,
+          "entities_improved": 290,
+          "entities_worsened": 383,
+          "entities_tied": 5327
+        }
+      ],
+      "n_positive_family_intervals": 20,
+      "offdiagonal_gain_range": [
+        0.018222222222222223,
+        0.024166666666666666
+      ],
+      "headroom_mean": 0.08236666666666667
+    },
+    "musicbrainz": {
+      "seed": 42,
+      "entities": 6000,
+      "queries": 18000,
+      "paired_hits_sha256": "c5afe0114b15fae74effd9b671c5c379d8b69ea2730a4b7f5f4b2a1977539b7f",
+      "offdiagonal": [
+        {
+          "eval": "minilm_l6",
+          "selection": "bge_small",
+          "delta_R@1": 5.5555555555555355e-05,
+          "ci95": [
+            -0.002999999999999832,
+            0.0031111111111108325
+          ],
+          "family_ci": [
+            -0.005277777777777293,
+            0.005486128472220972
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 151,
+          "entities_worsened": 151,
+          "entities_tied": 5698
+        },
+        {
+          "eval": "minilm_l6",
+          "selection": "bge_base",
+          "delta_R@1": 5.5555555555555355e-05,
+          "ci95": [
+            -0.002999999999998501,
+            0.0031111111111108325
+          ],
+          "family_ci": [
+            -0.0053194618055535684,
+            0.005333333333332
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 151,
+          "entities_worsened": 151,
+          "entities_tied": 5698
+        },
+        {
+          "eval": "minilm_l6",
+          "selection": "e5_base",
+          "delta_R@1": 5.5555555555555355e-05,
+          "ci95": [
+            -0.0030000000000001657,
+            0.003111111111112
+          ],
+          "family_ci": [
+            -0.005277777777775834,
+            0.0053333333333321666
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 151,
+          "entities_worsened": 151,
+          "entities_tied": 5698
+        },
+        {
+          "eval": "minilm_l6",
+          "selection": "gte_base",
+          "delta_R@1": 5.5555555555555355e-05,
+          "ci95": [
+            -0.002999999999999166,
+            0.0031111111111108347
+          ],
+          "family_ci": [
+            -0.005333333333331626,
+            0.005319461805554764
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 151,
+          "entities_worsened": 151,
+          "entities_tied": 5698
+        },
+        {
+          "eval": "bge_small",
+          "selection": "minilm_l6",
+          "delta_R@1": 0.0007222222222222222,
+          "ci95": [
+            -0.0014999999999996665,
+            0.002999999999999666
+          ],
+          "family_ci": [
+            -0.0032222222222204164,
+            0.004611111111111334
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 68,
+          "entities_worsened": 66,
+          "entities_tied": 5866
+        },
+        {
+          "eval": "bge_small",
+          "selection": "bge_base",
+          "delta_R@1": 0.0007222222222222222,
+          "ci95": [
+            -0.001499999999999,
+            0.0029444444444461666
+          ],
+          "family_ci": [
+            -0.0031111111111095002,
+            0.00465279513888864
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 68,
+          "entities_worsened": 66,
+          "entities_tied": 5866
+        },
+        {
+          "eval": "bge_small",
+          "selection": "e5_base",
+          "delta_R@1": 0.0007222222222222222,
+          "ci95": [
+            -0.0015555555555539988,
+            0.002944444444446
+          ],
+          "family_ci": [
+            -0.0032777777777760002,
+            0.004777777777778292
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 68,
+          "entities_worsened": 66,
+          "entities_tied": 5866
+        },
+        {
+          "eval": "bge_small",
+          "selection": "gte_base",
+          "delta_R@1": 0.0007222222222222222,
+          "ci95": [
+            -0.001499999999999167,
+            0.0030000000000003336
+          ],
+          "family_ci": [
+            -0.003166666666665208,
+            0.004722222222222792
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 68,
+          "entities_worsened": 66,
+          "entities_tied": 5866
+        },
+        {
+          "eval": "bge_base",
+          "selection": "minilm_l6",
+          "delta_R@1": -0.0005000000000000001,
+          "ci95": [
+            -0.0028888888888881675,
+            0.001888888888889999
+          ],
+          "family_ci": [
+            -0.004722222222221209,
+            0.003611111111111292
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 80,
+          "entities_worsened": 86,
+          "entities_tied": 5834
+        },
+        {
+          "eval": "bge_base",
+          "selection": "bge_small",
+          "delta_R@1": -0.0005000000000000001,
+          "ci95": [
+            -0.0029444444444425002,
+            0.0018888888888893346
+          ],
+          "family_ci": [
+            -0.004833333333331626,
+            0.003777777777777875
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 80,
+          "entities_worsened": 86,
+          "entities_tied": 5834
+        },
+        {
+          "eval": "bge_base",
+          "selection": "e5_base",
+          "delta_R@1": -0.0005000000000000001,
+          "ci95": [
+            -0.002888888888888831,
+            0.0018888888888893322
+          ],
+          "family_ci": [
+            -0.004833333333332625,
+            0.003666666666666625
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 80,
+          "entities_worsened": 86,
+          "entities_tied": 5834
+        },
+        {
+          "eval": "bge_base",
+          "selection": "gte_base",
+          "delta_R@1": -0.0005000000000000001,
+          "ci95": [
+            -0.0028888888888889993,
+            0.0018888888888886667
+          ],
+          "family_ci": [
+            -0.004722222222220417,
+            0.003555555555556334
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 80,
+          "entities_worsened": 86,
+          "entities_tied": 5834
+        },
+        {
+          "eval": "e5_base",
+          "selection": "minilm_l6",
+          "delta_R@1": -0.00022222222222222231,
+          "ci95": [
+            -0.002111111111108667,
+            0.0016666666666678332
+          ],
+          "family_ci": [
+            -0.0035416840277755278,
+            0.003041684027778515
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 43,
+          "entities_worsened": 55,
+          "entities_tied": 5902
+        },
+        {
+          "eval": "e5_base",
+          "selection": "bge_small",
+          "delta_R@1": -0.00022222222222222231,
+          "ci95": [
+            -0.002055555555554166,
+            0.0016111111111133335
+          ],
+          "family_ci": [
+            -0.0035555555555534584,
+            0.003055555555557251
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 43,
+          "entities_worsened": 55,
+          "entities_tied": 5902
+        },
+        {
+          "eval": "e5_base",
+          "selection": "bge_base",
+          "delta_R@1": -0.00022222222222222231,
+          "ci95": [
+            -0.002055555555554334,
+            0.0016666666666678325
+          ],
+          "family_ci": [
+            -0.0034861284722198186,
+            0.003111111111112667
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 43,
+          "entities_worsened": 55,
+          "entities_tied": 5902
+        },
+        {
+          "eval": "e5_base",
+          "selection": "gte_base",
+          "delta_R@1": -0.00022222222222222231,
+          "ci95": [
+            -0.0021111111111086663,
+            0.0016666666666676673
+          ],
+          "family_ci": [
+            -0.0034999999999972926,
+            0.0031111111111127494
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 43,
+          "entities_worsened": 55,
+          "entities_tied": 5902
+        },
+        {
+          "eval": "gte_base",
+          "selection": "minilm_l6",
+          "delta_R@1": 0.001388888888888889,
+          "ci95": [
+            -0.0005555555555556672,
+            0.0033333333333334996
+          ],
+          "family_ci": [
+            -0.001999999999999792,
+            0.0048888888888879165
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 56,
+          "entities_worsened": 40,
+          "entities_tied": 5904
+        },
+        {
+          "eval": "gte_base",
+          "selection": "bge_small",
+          "delta_R@1": 0.001388888888888889,
+          "ci95": [
+            -0.0005555555555561664,
+            0.0033888888888884998
+          ],
+          "family_ci": [
+            -0.0019444444444451248,
+            0.004944444444444333
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 56,
+          "entities_worsened": 40,
+          "entities_tied": 5904
+        },
+        {
+          "eval": "gte_base",
+          "selection": "bge_base",
+          "delta_R@1": 0.001388888888888889,
+          "ci95": [
+            -0.0005555555555561664,
+            0.0033888888888881667
+          ],
+          "family_ci": [
+            -0.0019444444444443334,
+            0.004888888888889167
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 56,
+          "entities_worsened": 40,
+          "entities_tied": 5904
+        },
+        {
+          "eval": "gte_base",
+          "selection": "e5_base",
+          "delta_R@1": 0.001388888888888889,
+          "ci95": [
+            -0.0005555555555558331,
+            0.003388888888887672
+          ],
+          "family_ci": [
+            -0.0019444444444445008,
+            0.004999999999998625
+          ],
+          "family_size": 80,
+          "positive_family_interval": false,
+          "entities_improved": 56,
+          "entities_worsened": 40,
+          "entities_tied": 5904
+        }
+      ],
+      "secondary_vs_full": [
+        {
+          "eval": "minilm_l6",
+          "method": "oracle",
+          "delta_R@1": 0.006,
+          "ci95": [
+            0.004833333333328501,
+            0.007222222222215001
+          ],
+          "family_ci": [
+            0.004111111111107,
+            0.008055555555547501
+          ],
+          "family_size": 40,
+          "positive_family_interval": true,
+          "entities_improved": 117,
+          "entities_worsened": 9,
+          "entities_tied": 5874
+        },
+        {
+          "eval": "minilm_l6",
+          "method": "centroid",
+          "delta_R@1": 0.005444444444444445,
+          "ci95": [
+            0.003777777777771834,
+            0.007111111111103334
+          ],
+          "family_ci": [
+            0.002611111111105667,
+            0.008166666666658584
+          ],
+          "family_size": 40,
+          "positive_family_interval": true,
+          "entities_improved": 142,
+          "entities_worsened": 30,
+          "entities_tied": 5828
+        },
+        {
+          "eval": "bge_small",
+          "method": "oracle",
+          "delta_R@1": 0.0025555555555555557,
+          "ci95": [
+            0.0018333333333315001,
+            0.0033333333333305007
+          ],
+          "family_ci": [
+            0.0013888888888875,
+            0.0038888888888855
+          ],
+          "family_size": 40,
+          "positive_family_interval": true,
+          "entities_improved": 46,
+          "entities_worsened": 1,
+          "entities_tied": 5953
+        },
+        {
+          "eval": "bge_small",
+          "method": "centroid",
+          "delta_R@1": -5.555555555555547e-05,
+          "ci95": [
+            -0.0010555555555555002,
+            0.0008888888888883334
+          ],
+          "family_ci": [
+            -0.0017222222222223337,
+            0.0014999999999988334
+          ],
+          "family_size": 40,
+          "positive_family_interval": false,
+          "entities_improved": 27,
+          "entities_worsened": 23,
+          "entities_tied": 5950
+        },
+        {
+          "eval": "bge_base",
+          "method": "oracle",
+          "delta_R@1": 0.0036666666666666666,
+          "ci95": [
+            0.002777777777775,
+            0.004555555555551
+          ],
+          "family_ci": [
+            0.0022777777777755,
+            0.005222222222217
+          ],
+          "family_size": 40,
+          "positive_family_interval": true,
+          "entities_improved": 67,
+          "entities_worsened": 1,
+          "entities_tied": 5932
+        },
+        {
+          "eval": "bge_base",
+          "method": "centroid",
+          "delta_R@1": 0.0006111111111111112,
+          "ci95": [
+            -0.0005000000000015,
+            0.0017222222222198335
+          ],
+          "family_ci": [
+            -0.00127777777777875,
+            0.0023888888888861665
+          ],
+          "family_size": 40,
+          "positive_family_interval": false,
+          "entities_improved": 48,
+          "entities_worsened": 29,
+          "entities_tied": 5923
+        },
+        {
+          "eval": "e5_base",
+          "method": "oracle",
+          "delta_R@1": 0.0019444444444444446,
+          "ci95": [
+            0.0012777777777765,
+            0.0026666666666640003
+          ],
+          "family_ci": [
+            0.0008888888888880001,
+            0.0031666666666635
+          ],
+          "family_size": 40,
+          "positive_family_interval": true,
+          "entities_improved": 38,
+          "entities_worsened": 3,
+          "entities_tied": 5959
+        },
+        {
+          "eval": "e5_base",
+          "method": "centroid",
+          "delta_R@1": 0.0004444444444444445,
+          "ci95": [
+            -0.00022222222222199997,
+            0.0011111111111105
+          ],
+          "family_ci": [
+            -0.000666666666666,
+            0.0015555555555546669
+          ],
+          "family_size": 40,
+          "positive_family_interval": false,
+          "entities_improved": 21,
+          "entities_worsened": 14,
+          "entities_tied": 5965
+        },
+        {
+          "eval": "gte_base",
+          "method": "oracle",
+          "delta_R@1": 0.0021111111111111113,
+          "ci95": [
+            0.0014444444444430002,
+            0.0028333333333305
+          ],
+          "family_ci": [
+            0.0010555555555545,
+            0.0033333333333300003
+          ],
+          "family_size": 40,
+          "positive_family_interval": true,
+          "entities_improved": 39,
+          "entities_worsened": 1,
+          "entities_tied": 5960
+        },
+        {
+          "eval": "gte_base",
+          "method": "centroid",
+          "delta_R@1": -0.0007222222222222222,
+          "ci95": [
+            -0.0014444444444439999,
+            -5.000444502911705e-16
+          ],
+          "family_ci": [
+            -0.0019999999999985004,
+            0.0003888888888883334
+          ],
+          "family_size": 40,
+          "positive_family_interval": false,
+          "entities_improved": 12,
+          "entities_worsened": 22,
+          "entities_tied": 5966
+        }
+      ],
+      "n_positive_family_intervals": 0,
+      "offdiagonal_gain_range": [
+        -0.0005000000000000001,
+        0.001388888888888889
+      ],
+      "headroom_mean": 0.011066666666666647
+    }
+  },
+  "script_sha256": "a3019e24a7d9d0456aadd66cf6b25a52c056c17af92973de70fb1191318b312c"
+}

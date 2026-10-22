@@ -1,0 +1,16 @@
+{
+  "url": "https://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/offers_english.json.gz",
+  "bytes": 4076708488,
+  "sha256": "0f01d79c8a1b0bb0acc701e7bee48f8d650cd95d1981504d2c6a7629bb4f3973",
+  "lines": 16451499,
+  "parse_seconds": 268.08309759991243,
+  "fields": [
+    "cluster_id",
+    "source_domain",
+    "title",
+    "brand",
+    "description",
+    "price"
+  ],
+  "note": "Same parse rules and row order as original scripts; unused metadata fields omitted"
+}

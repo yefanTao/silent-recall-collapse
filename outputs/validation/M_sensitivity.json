@@ -1,0 +1,113 @@
+{
+  "config": {
+    "D": 128,
+    "N_BASE": 20000,
+    "SINK_FRAC": 0.3,
+    "K": 10,
+    "n": 26000,
+    "M_list": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "efC_list": [
+      40,
+      200,
+      500
+    ]
+  },
+  "grid": [
+    {
+      "M": 8,
+      "efC": 40,
+      "recall": 0.4787,
+      "max_indeg": 5993
+    },
+    {
+      "M": 8,
+      "efC": 200,
+      "recall": 0.601,
+      "max_indeg": 5988
+    },
+    {
+      "M": 8,
+      "efC": 500,
+      "recall": 0.6531,
+      "max_indeg": 5988
+    },
+    {
+      "M": 16,
+      "efC": 40,
+      "recall": 0.5971,
+      "max_indeg": 5977
+    },
+    {
+      "M": 16,
+      "efC": 200,
+      "recall": 0.6588,
+      "max_indeg": 5970
+    },
+    {
+      "M": 16,
+      "efC": 500,
+      "recall": 0.6674,
+      "max_indeg": 5865
+    },
+    {
+      "M": 32,
+      "efC": 40,
+      "recall": 0.8483,
+      "max_indeg": 6480
+    },
+    {
+      "M": 32,
+      "efC": 200,
+      "recall": 0.8752,
+      "max_indeg": 5910
+    },
+    {
+      "M": 32,
+      "efC": 500,
+      "recall": 0.877,
+      "max_indeg": 5920
+    },
+    {
+      "M": 64,
+      "efC": 40,
+      "recall": 0.9,
+      "max_indeg": 6205
+    },
+    {
+      "M": 64,
+      "efC": 200,
+      "recall": 0.6725,
+      "max_indeg": 7748
+    },
+    {
+      "M": 64,
+      "efC": 500,
+      "recall": 0.6744,
+      "max_indeg": 7577
+    }
+  ],
+  "verdict": {
+    "best": {
+      "M": 64,
+      "efC": 40,
+      "recall": 0.9,
+      "max_indeg": 6205
+    },
+    "worst": {
+      "M": 8,
+      "efC": 40,
+      "recall": 0.4787,
+      "max_indeg": 5993
+    },
+    "raising_M_effect_at_efC200 (M64 - M8)": 0.0715,
+    "M_helps": true,
+    "M_hurts": false,
+    "any_setting_recovers (recall>=0.95)": false,
+    "interpretation": "If no (M, efConstruction) setting reaches recall>=0.95, the mega-hub collapse cannot be tuned away with build-time graph knobs -- it requires dedup/reduction. The sign of raising_M_effect says whether more neighbors spread or amplify the hub."
+  }
+}

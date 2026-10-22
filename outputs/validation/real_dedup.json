@@ -1,0 +1,31 @@
+{
+  "raw": {
+    "n": 195121,
+    "hnsw": 0.3505,
+    "ivf": 0.9914,
+    "indeg_max": 44515
+  },
+  "exact_dedup": {
+    "n": 39460,
+    "removed": 155661,
+    "hnsw": 0.9992,
+    "ivf": 0.9955,
+    "indeg_max": 103
+  },
+  "near_dedup": {
+    "n": 36578,
+    "removed_distinct": 2882,
+    "multi_groups": 1879,
+    "hnsw": 0.9993,
+    "ivf": 0.9964,
+    "indeg_max": 108
+  },
+  "crux": {
+    "exact_dedup_removed": 155661,
+    "near_dedup_removed_DISTINCT": 2882,
+    "ratio_distinct_to_exact": 0.02,
+    "hnsw_raw": 0.3505,
+    "hnsw_after_exact_dedup": 0.9992,
+    "hnsw_after_near_dedup": 0.9993
+  }
+}

@@ -1,0 +1,7 @@
+# Separate Python 3.11 environment; do not mix with the NumPy 2 audit.
+numpy==1.25.0
+faiss-cpu==1.10.0
+hnswlib==0.8.0
+diskannpy==0.7.0
+psutil
+matplotlib==3.8.4

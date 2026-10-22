@@ -1,0 +1,220 @@
+{
+  "config": {
+    "D": 128,
+    "N_BASE": 20000,
+    "K": 10,
+    "SEED": 0,
+    "sink_frac": [
+      0.0,
+      0.001,
+      0.002,
+      0.003,
+      0.0035,
+      0.004,
+      0.005,
+      0.0075,
+      0.01,
+      0.02,
+      0.05
+    ],
+    "graph_degree": 32,
+    "Lbuild": 100,
+    "Lsearch": 100
+  },
+  "points": [
+    {
+      "sink_frac": 0.0,
+      "n": 20000,
+      "S": 0,
+      "diskann_recall": 0.9007,
+      "max_indeg": 60,
+      "medoid": 16104,
+      "medoid_is_sink": false,
+      "centroid_sink_cos": 0.0077,
+      "medoid_sink_cos": 0.1468,
+      "Lsearch_trap": {
+        "100": 0.9007,
+        "500": 0.9944,
+        "2000": 1.0
+      }
+    },
+    {
+      "sink_frac": 0.001,
+      "n": 20020,
+      "S": 20,
+      "diskann_recall": 0.9005,
+      "max_indeg": 67,
+      "medoid": 16104,
+      "medoid_is_sink": false,
+      "centroid_sink_cos": 0.1588,
+      "medoid_sink_cos": 0.1468,
+      "Lsearch_trap": {
+        "100": 0.9005,
+        "500": 0.994,
+        "2000": 0.9997
+      }
+    },
+    {
+      "sink_frac": 0.002,
+      "n": 20040,
+      "S": 40,
+      "diskann_recall": 0.8994,
+      "max_indeg": 70,
+      "medoid": 16104,
+      "medoid_is_sink": false,
+      "centroid_sink_cos": 0.2995,
+      "medoid_sink_cos": 0.1468,
+      "Lsearch_trap": {
+        "100": 0.8994,
+        "500": 0.994,
+        "2000": 0.9997
+      }
+    },
+    {
+      "sink_frac": 0.003,
+      "n": 20060,
+      "S": 60,
+      "diskann_recall": 0.0,
+      "max_indeg": 421,
+      "medoid": 20000,
+      "medoid_is_sink": true,
+      "centroid_sink_cos": 0.4232,
+      "medoid_sink_cos": 1.0,
+      "Lsearch_trap": {
+        "100": 0.0,
+        "500": 0.0,
+        "2000": 0.0
+      }
+    },
+    {
+      "sink_frac": 0.0035,
+      "n": 20070,
+      "S": 70,
+      "diskann_recall": 0.0,
+      "max_indeg": 499,
+      "medoid": 20000,
+      "medoid_is_sink": true,
+      "centroid_sink_cos": 0.4776,
+      "medoid_sink_cos": 1.0,
+      "Lsearch_trap": {
+        "100": 0.0,
+        "500": 0.0,
+        "2000": 0.0
+      }
+    },
+    {
+      "sink_frac": 0.004,
+      "n": 20080,
+      "S": 80,
+      "diskann_recall": 0.0,
+      "max_indeg": 472,
+      "medoid": 20000,
+      "medoid_is_sink": true,
+      "centroid_sink_cos": 0.527,
+      "medoid_sink_cos": 1.0,
+      "Lsearch_trap": {
+        "100": 0.0,
+        "500": 0.0,
+        "2000": 0.0
+      }
+    },
+    {
+      "sink_frac": 0.005,
+      "n": 20100,
+      "S": 100,
+      "diskann_recall": 0.0,
+      "max_indeg": 490,
+      "medoid": 20000,
+      "medoid_is_sink": true,
+      "centroid_sink_cos": 0.6117,
+      "medoid_sink_cos": 1.0,
+      "Lsearch_trap": {
+        "100": 0.0,
+        "500": 0.0,
+        "2000": 0.0
+      }
+    },
+    {
+      "sink_frac": 0.0075,
+      "n": 20150,
+      "S": 150,
+      "diskann_recall": 0.0,
+      "max_indeg": 522,
+      "medoid": 20000,
+      "medoid_is_sink": true,
+      "centroid_sink_cos": 0.7563,
+      "medoid_sink_cos": 1.0,
+      "Lsearch_trap": {
+        "100": 0.0,
+        "500": 0.0,
+        "2000": 0.0
+      }
+    },
+    {
+      "sink_frac": 0.01,
+      "n": 20200,
+      "S": 200,
+      "diskann_recall": 0.0,
+      "max_indeg": 662,
+      "medoid": 20000,
+      "medoid_is_sink": true,
+      "centroid_sink_cos": 0.8385,
+      "medoid_sink_cos": 1.0,
+      "Lsearch_trap": {
+        "100": 0.0,
+        "500": 0.0,
+        "2000": 0.0
+      }
+    },
+    {
+      "sink_frac": 0.02,
+      "n": 20400,
+      "S": 400,
+      "diskann_recall": 0.0,
+      "max_indeg": 801,
+      "medoid": 20000,
+      "medoid_is_sink": true,
+      "centroid_sink_cos": 0.9508,
+      "medoid_sink_cos": 1.0,
+      "Lsearch_trap": {
+        "100": 0.0,
+        "500": 0.0,
+        "2000": 0.0
+      }
+    },
+    {
+      "sink_frac": 0.05,
+      "n": 21000,
+      "S": 1000,
+      "diskann_recall": 0.0,
+      "max_indeg": 3781,
+      "medoid": 20000,
+      "medoid_is_sink": true,
+      "centroid_sink_cos": 0.9916,
+      "medoid_sink_cos": 1.0,
+      "Lsearch_trap": {
+        "100": 0.0,
+        "500": 0.0,
+        "2000": 0.0
+      }
+    }
+  ],
+  "analysis": {
+    "capture_frac": 0.003,
+    "last_clean_frac": 0.002,
+    "max_indeg_at_capture": 421,
+    "collapse_is_in_HNSW_safe_regime": false,
+    "interpretation_A": "DiskANN recall is NOT an in-degree function: the cliff to 0 happens at sink_frac=0.003 where max in-degree is only 421 -- inside HNSW's SAFE regime (<200). For Vamana the controlling variable is the single-medoid ENTRY POINT, not in-degree. The in-degree blow-up still occurs (shared family marker) but does not mediate the collapse here.",
+    "interpretation_B": "Vamana's medoid = the point nearest the data centroid. A duplicate sink at fraction f drags the centroid toward the sink (centroid_sink_cos rises with f); once the sink copies are nearest the shifted centroid, the medoid IS a sink copy (medoid_is_sink flips True) and every greedy search starts inside the sink -> recall 0. The flip is a step at capture_frac.",
+    "fix": {
+      "frac": 0.05,
+      "raw_recall": 0.0,
+      "raw_medoid_is_sink": true,
+      "npunique_n": 20001,
+      "npunique_recall": 0.9038,
+      "npunique_medoid_is_sink": false,
+      "removed": 999
+    },
+    "interpretation_C": "The one-line fix closes on DiskANN too: np.unique removes the 999 duplicate sink vectors, the medoid returns to a normal point (medoid_is_sink True->False), and recall recovers 0.0->0.9038. Third graph family with a full diagnose->mechanism->fix arc."
+  }
+}

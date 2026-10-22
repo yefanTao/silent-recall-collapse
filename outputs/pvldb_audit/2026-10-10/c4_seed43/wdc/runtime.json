@@ -1,0 +1,36 @@
+{
+  "status": "complete",
+  "seconds": 255.77222569999867,
+  "peak_rss_bytes": 3567087616,
+  "gpu_peak_allocated_bytes": 3035753984,
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "source_sha256": "7dcdbf31d8800b6519ebfba0722486e5ba9d9ddafd8bb7147172f382d69d300a",
+  "executed_sha256": "7f864f0a295a01124ae44c9a23465a0285c36becb4f0f9ac456dc73e35cdea88",
+  "wrapper_sha256": "94fa34f333cb83fe145c7c62e78bb7a5bf0e532dd843581c525094670f39d6a8",
+  "data_sha256": "c8c7c8a939d04911feb717bd5139f4f38ee1db03c43d3de6cc63ecc06b84b008",
+  "revisions": {
+    "sentence-transformers/all-MiniLM-L6-v2": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "BAAI/bge-small-en-v1.5": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "BAAI/bge-base-en-v1.5": "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
+    "intfloat/e5-base-v2": "f52bf8ec8c7124536f0efb74aca902b2995e5bcd",
+    "thenlper/gte-base": "c078288308d8dee004ab72c6191778064285ec0c"
+  },
+  "seed": 43,
+  "packages": {
+    "numpy": "2.5.3",
+    "torch": "2.11.0+cu128",
+    "sentence-transformers": "6.1.0",
+    "scipy": "1.16.3"
+  },
+  "changes": [
+    "Separate outputs and caches",
+    "WDC score-free cleaned pickle; same consumed columns",
+    "Pinned current model revisions",
+    "Encoding batch 128 instead of 1024; eight CPU threads"
+  ],
+  "limitations": [
+    "One entity split (seed 43)",
+    "Archived oracle and query-level p-values are not certified conclusions",
+    "Re-encoded current model/runtime replication, not byte-identical archive reproduction"
+  ]
+}

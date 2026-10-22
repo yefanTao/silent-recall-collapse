@@ -1,0 +1,16 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "device": "NVIDIA GeForce RTX 5070",
+  "torch": "2.11.0+cu128",
+  "batch_size": 256,
+  "n_rows": 1282471,
+  "shape": [
+    1282471,
+    384
+  ],
+  "encoding_chunks": 8192,
+  "global_length_sort": true,
+  "seconds": 374.702086500125,
+  "note": "Regenerated embeddings, original embedding revision not archived; not byte-identical reproduction"
+}

@@ -1,0 +1,107 @@
+{
+  "config": {
+    "corpus": "WDC subset",
+    "n": 120000,
+    "K": 10,
+    "NQ": 5000,
+    "SEED": 0,
+    "models": [
+      "minilm_l6",
+      "bge_small",
+      "bge_base",
+      "e5_base",
+      "gte_base"
+    ]
+  },
+  "per_model": [
+    {
+      "model": "minilm_l6",
+      "dim": 384,
+      "exact_text_dup": 65940,
+      "exact_text_dup_frac": 0.5495,
+      "exact_vec_dup": 65969,
+      "exact_vec_dup_frac": 0.5497,
+      "text_dup_preserved_as_vec_dup": true,
+      "raw_max_indeg": 3938,
+      "raw_hnsw_recall": 0.6073,
+      "npunique_max_indeg": 98,
+      "npunique_hnsw_recall": 0.999,
+      "npunique_removed": 65969
+    },
+    {
+      "model": "bge_small",
+      "dim": 384,
+      "exact_text_dup": 65940,
+      "exact_text_dup_frac": 0.5495,
+      "exact_vec_dup": 65966,
+      "exact_vec_dup_frac": 0.5497,
+      "text_dup_preserved_as_vec_dup": true,
+      "raw_max_indeg": 5372,
+      "raw_hnsw_recall": 0.5971,
+      "npunique_max_indeg": 159,
+      "npunique_hnsw_recall": 0.9981,
+      "npunique_removed": 65966
+    },
+    {
+      "model": "bge_base",
+      "dim": 768,
+      "exact_text_dup": 65940,
+      "exact_text_dup_frac": 0.5495,
+      "exact_vec_dup": 65966,
+      "exact_vec_dup_frac": 0.5497,
+      "text_dup_preserved_as_vec_dup": true,
+      "raw_max_indeg": 4293,
+      "raw_hnsw_recall": 0.6153,
+      "npunique_max_indeg": 105,
+      "npunique_hnsw_recall": 0.9992,
+      "npunique_removed": 65966
+    },
+    {
+      "model": "e5_base",
+      "dim": 768,
+      "exact_text_dup": 65940,
+      "exact_text_dup_frac": 0.5495,
+      "exact_vec_dup": 65919,
+      "exact_vec_dup_frac": 0.5493,
+      "text_dup_preserved_as_vec_dup": true,
+      "raw_max_indeg": 3115,
+      "raw_hnsw_recall": 0.6363,
+      "npunique_max_indeg": 119,
+      "npunique_hnsw_recall": 0.998,
+      "npunique_removed": 65919
+    },
+    {
+      "model": "gte_base",
+      "dim": 768,
+      "exact_text_dup": 65940,
+      "exact_text_dup_frac": 0.5495,
+      "exact_vec_dup": 65926,
+      "exact_vec_dup_frac": 0.5494,
+      "text_dup_preserved_as_vec_dup": true,
+      "raw_max_indeg": 4243,
+      "raw_hnsw_recall": 0.6003,
+      "npunique_max_indeg": 117,
+      "npunique_hnsw_recall": 0.9987,
+      "npunique_removed": 65926
+    }
+  ],
+  "verdict": {
+    "exact_text_dup_frac": 0.5495,
+    "vec_dup_frac_range": [
+      0.5493,
+      0.5497
+    ],
+    "text_dups_always_become_vec_dups": true,
+    "all_models_collapse_raw": true,
+    "raw_recall_range": [
+      0.5971,
+      0.6363
+    ],
+    "npunique_fixes_all_models": true,
+    "npunique_recall_range": [
+      0.998,
+      0.9992
+    ],
+    "interpretation": "Tests whether the exact-degeneracy trigger and the np.unique fix are embedding-model invariant. Deterministic embedders map identical TEXT to identical VECTORS, so the byte-identical-text duplicates that drive the mega-hub are preserved as byte-identical VECTORS in every model -- the trigger and the np.unique fix transfer across models, even though absolute recall and near-dup geometry vary by model. If text_dups_always_become_vec_dups is true and np.unique fixes every model, the phenomenon is not a MiniLM artifact."
+  }
+}

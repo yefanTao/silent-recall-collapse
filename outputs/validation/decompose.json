@@ -1,0 +1,33 @@
+{
+  "config": {
+    "corpus": "WDC-clean (full)",
+    "n_full": 947584,
+    "n_reduced": 65078,
+    "n_queries": 20000,
+    "K": 10,
+    "ef_sweep": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "metric": "entity recall@10"
+  },
+  "measurements": {
+    "R_fh_full_hnsw": 0.7107,
+    "R_fe_full_exact": 0.8419,
+    "R_rh_reduced_hnsw": 0.8618,
+    "R_re_reduced_exact": 0.8655
+  },
+  "decomposition": {
+    "deployed_gain_Rrh_minus_Rfh": 0.1511,
+    "navigation_loss_full_gallery": 0.1312,
+    "navigation_loss_reduced_gallery": 0.0038,
+    "slot_efficiency_at_perfect_nav": 0.0236,
+    "identity_check_slot+navfull-navred": 0.1511,
+    "navigation_share_of_gain": 0.844,
+    "slot_share_of_gain": 0.156
+  },
+  "interpretation": "Decomposes the deployed entity-recall gain of Reduced-HNSW over Full-HNSW. navigation_loss_full is what the in-degree law costs Full-HNSW (HNSW vs exact on the hub-laden full gallery); navigation_loss_reduced should be ~0 (the reduced gallery has no mega-hub); slot_efficiency is the cardinality effect at perfect navigation. The split shows honestly how much of \u00a77's headline gain is navigation (the paper's mechanism) vs slot/cardinality, on the real corpus -- answering the obvious reviewer question."
+}

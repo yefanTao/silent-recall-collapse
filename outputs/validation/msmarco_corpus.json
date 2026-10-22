@@ -1,0 +1,158 @@
+{
+  "config": {
+    "model": "all-MiniLM-L6-v2",
+    "domain": "web-passage retrieval (text-RAG), NON-product",
+    "source": "MS MARCO v1.1 train passages",
+    "NQSRC": 40000,
+    "N": 328783,
+    "D": 384,
+    "K": 10,
+    "NQ": 5000,
+    "SEED": 0,
+    "exact_dup_rows": 16687,
+    "exact_dup_frac": 0.0508
+  },
+  "redundancy_sweep": [
+    {
+      "R": 1,
+      "n": 312096,
+      "max_indeg": 179,
+      "hnsw_recall": 0.9997,
+      "ivf_recall": 0.9914
+    },
+    {
+      "R": 2,
+      "n": 324349,
+      "max_indeg": 171,
+      "hnsw_recall": 0.9957,
+      "ivf_recall": 0.9914
+    },
+    {
+      "R": 3,
+      "n": 326825,
+      "max_indeg": 148,
+      "hnsw_recall": 0.9945,
+      "ivf_recall": 0.9913
+    },
+    {
+      "R": 5,
+      "n": 328145,
+      "max_indeg": 116,
+      "hnsw_recall": 0.9937,
+      "ivf_recall": 0.9917
+    },
+    {
+      "R": 8,
+      "n": 328571,
+      "max_indeg": 166,
+      "hnsw_recall": 0.9926,
+      "ivf_recall": 0.991
+    },
+    {
+      "R": "all",
+      "n": 328783,
+      "max_indeg": 192,
+      "hnsw_recall": 0.9934,
+      "ivf_recall": 0.9908
+    }
+  ],
+  "dedup_triad": [
+    {
+      "treatment": "raw",
+      "n": 195000,
+      "max_indeg": 183,
+      "hnsw_recall": 0.9952,
+      "ivf_recall": 0.9901
+    },
+    {
+      "treatment": "exact np.unique",
+      "n": 188438,
+      "max_indeg": 154,
+      "hnsw_recall": 0.9996,
+      "ivf_recall": 0.9918
+    },
+    {
+      "treatment": "+ near-dup",
+      "n": 188429,
+      "max_indeg": 119,
+      "hnsw_recall": 0.9997,
+      "ivf_recall": 0.9903
+    }
+  ],
+  "hub_injection": [
+    {
+      "sink_frac": 0.0,
+      "n": 150000,
+      "max_indeg": 105,
+      "hnsw_recall": 0.9998,
+      "ivf_recall": 0.9926
+    },
+    {
+      "sink_frac": 0.01,
+      "n": 151500,
+      "max_indeg": 1475,
+      "hnsw_recall": 0.9952,
+      "ivf_recall": 0.992
+    },
+    {
+      "sink_frac": 0.05,
+      "n": 157500,
+      "max_indeg": 7477,
+      "hnsw_recall": 0.9614,
+      "ivf_recall": 0.9916
+    },
+    {
+      "sink_frac": 0.1,
+      "n": 165000,
+      "max_indeg": 14973,
+      "hnsw_recall": 0.9564,
+      "ivf_recall": 0.9918
+    },
+    {
+      "sink_frac": 0.2,
+      "n": 180000,
+      "max_indeg": 29942,
+      "hnsw_recall": 0.9747,
+      "ivf_recall": 0.9913
+    },
+    {
+      "sink_frac": 0.35,
+      "n": 202500,
+      "max_indeg": 52410,
+      "hnsw_recall": 0.9727,
+      "ivf_recall": 0.991
+    },
+    {
+      "sink_frac": 0.5,
+      "n": 225000,
+      "max_indeg": 74917,
+      "hnsw_recall": 0.945,
+      "ivf_recall": 0.9908
+    }
+  ],
+  "verdict": {
+    "domain": "NON-product (web-passage / text-RAG)",
+    "natural_exact_dup_frac": 0.0508,
+    "A_sweep_spearman_logindeg_hnsw": 0.143,
+    "A_sweep_p": 0.787,
+    "A_hnsw_R1_vs_all": [
+      0.9997,
+      0.9934
+    ],
+    "A_ivf_min": 0.9908,
+    "B_dedup_recovers": [
+      0.9952,
+      0.9996
+    ],
+    "B_neardup_adds_over_exact": 0.0001,
+    "C_inj_spearman_logindeg_hnsw": -0.714,
+    "C_inj_p": 0.0713,
+    "C_hnsw_clean_vs_maxhub": [
+      0.9998,
+      0.945
+    ],
+    "C_max_indeg": 74917,
+    "C_ivf_min": 0.9908,
+    "interpretation": "Fourth real corpus, FIRST non-product domain (MS MARCO web passages, text-RAG). (A) natural web-passage duplication is low-concentration so the in-degree law shows a gentle slope (cf. the conditional law); (B) the exact-vs-near dichotomy should replicate (np.unique captures recovery, near-dup adds ~0); (C) a controlled verbatim mega-hub on REAL text-RAG embeddings exercises the law across its full range and must show HNSW collapse with in-degree while IVF stays immune. Together they extend external validity beyond product ER."
+  }
+}

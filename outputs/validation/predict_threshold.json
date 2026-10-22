@@ -1,0 +1,137 @@
+{
+  "config": {
+    "D": 128,
+    "N_BASE": 20000,
+    "K": 10,
+    "SEED": 0,
+    "sink_frac": [
+      0.0,
+      0.01,
+      0.02,
+      0.03,
+      0.05,
+      0.07,
+      0.1,
+      0.13,
+      0.16,
+      0.2,
+      0.25,
+      0.3,
+      0.4,
+      0.5,
+      0.6
+    ]
+  },
+  "points": [
+    {
+      "sink_frac": 0.0,
+      "n": 20000,
+      "recall": 0.976,
+      "max_indeg": 55
+    },
+    {
+      "sink_frac": 0.01,
+      "n": 20200,
+      "recall": 0.969,
+      "max_indeg": 185
+    },
+    {
+      "sink_frac": 0.02,
+      "n": 20400,
+      "recall": 0.8971,
+      "max_indeg": 987
+    },
+    {
+      "sink_frac": 0.03,
+      "n": 20600,
+      "recall": 0.8593,
+      "max_indeg": 1488
+    },
+    {
+      "sink_frac": 0.05,
+      "n": 21000,
+      "recall": 0.8374,
+      "max_indeg": 1891
+    },
+    {
+      "sink_frac": 0.07,
+      "n": 21400,
+      "recall": 0.838,
+      "max_indeg": 2003
+    },
+    {
+      "sink_frac": 0.1,
+      "n": 22000,
+      "recall": 0.8421,
+      "max_indeg": 2072
+    },
+    {
+      "sink_frac": 0.13,
+      "n": 22600,
+      "recall": 0.8237,
+      "max_indeg": 2561
+    },
+    {
+      "sink_frac": 0.16,
+      "n": 23200,
+      "recall": 0.8372,
+      "max_indeg": 3157
+    },
+    {
+      "sink_frac": 0.2,
+      "n": 24000,
+      "recall": 0.6798,
+      "max_indeg": 4783
+    },
+    {
+      "sink_frac": 0.25,
+      "n": 25000,
+      "recall": 0.6805,
+      "max_indeg": 5083
+    },
+    {
+      "sink_frac": 0.3,
+      "n": 26000,
+      "recall": 0.6803,
+      "max_indeg": 5943
+    },
+    {
+      "sink_frac": 0.4,
+      "n": 28000,
+      "recall": 0.6797,
+      "max_indeg": 7975
+    },
+    {
+      "sink_frac": 0.5,
+      "n": 30000,
+      "recall": 0.6793,
+      "max_indeg": 9978
+    },
+    {
+      "sink_frac": 0.6,
+      "n": 32000,
+      "recall": 0.6791,
+      "max_indeg": 11985
+    }
+  ],
+  "verdict": {
+    "spearman_logindeg_recall": -0.971,
+    "p": 1.69e-09,
+    "linear_fit": {
+      "recall_hat": "1.318 + (-0.156)*log10(d_max)"
+    },
+    "leave_one_out_MAE": 0.0393,
+    "leave_one_out_maxerr": 0.0708,
+    "predictive_health_check_viable": true,
+    "knee": {
+      "between_indeg": [
+        3156,
+        4783
+      ],
+      "recall_drop": 0.1574,
+      "slope_recall_per_decade": -0.8724
+    },
+    "safe_max_indeg_for_recall>=0.95": 185,
+    "interpretation": "LOO MAE is the error of predicting HNSW recall from log10(max in-degree) alone, with no ground-truth queries. Low MAE => a single integer read off the index is a usable recall health check. The knee localizes the phase transition; safe_max_indeg is the operating margin below which recall stays >= 0.95."
+  }
+}

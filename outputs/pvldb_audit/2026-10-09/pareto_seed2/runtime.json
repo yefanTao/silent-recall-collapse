@@ -1,0 +1,186 @@
+{
+  "status": "complete",
+  "elapsed_seconds": 84.9434999,
+  "peak_process_rss_bytes": 9361698816,
+  "threads": 8,
+  "construction_seed": 2,
+  "timing_repetitions": 3,
+  "statistic": "median",
+  "query_batch": 20000,
+  "warmup_queries": 128,
+  "faiss": "1.15.1",
+  "numpy": "2.5.3",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "cpu": "Intel Core Ultra 9 285",
+  "source_sha256": "d723b4f7e1036764420e06051b95801d5534635f388a45f10f472e7efb8b55fe",
+  "wrapper_sha256": "458e82d590ec00d3537985532f613a6a0cbec806f60164771c518128c679a705",
+  "cache_provenance": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "device": "NVIDIA GeForce RTX 5070",
+    "torch": "2.11.0+cu128",
+    "batch_size": 256,
+    "n_rows": 1282471,
+    "shape": [
+      1282471,
+      384
+    ],
+    "encoding_chunks": 8192,
+    "global_length_sort": true,
+    "seconds": 374.702086500125,
+    "note": "Regenerated embeddings, original embedding revision not archived; not byte-identical reproduction"
+  },
+  "timings": [
+    {
+      "index_n": 947584,
+      "efSearch": 16,
+      "seconds": [
+        0.11923690000003262,
+        0.1268079999999827,
+        0.13285440000026938
+      ],
+      "median_qps": 157718.75591447484
+    },
+    {
+      "index_n": 947584,
+      "efSearch": 32,
+      "seconds": [
+        0.185472000000118,
+        0.18982510000023467,
+        0.18363570000019536
+      ],
+      "median_qps": 107832.98826770228
+    },
+    {
+      "index_n": 947584,
+      "efSearch": 64,
+      "seconds": [
+        0.31333800000038536,
+        0.33688690000008137,
+        0.31177100000013525
+      ],
+      "median_qps": 63828.83659171694
+    },
+    {
+      "index_n": 947584,
+      "efSearch": 128,
+      "seconds": [
+        0.5809242000000268,
+        0.5767961000001378,
+        0.5780135999998492
+      ],
+      "median_qps": 34601.26197723586
+    },
+    {
+      "index_n": 947584,
+      "efSearch": 256,
+      "seconds": [
+        1.0851134999998067,
+        1.091800599999715,
+        1.0962647000001198
+      ],
+      "median_qps": 18318.36326157471
+    },
+    {
+      "index_n": 220164,
+      "efSearch": 16,
+      "seconds": [
+        0.16490760000033333,
+        0.16228299999966111,
+        0.1570940999999948
+      ],
+      "median_qps": 123241.49787742256
+    },
+    {
+      "index_n": 220164,
+      "efSearch": 32,
+      "seconds": [
+        0.25609190000022863,
+        0.2577044999998179,
+        0.25773039999967295
+      ],
+      "median_qps": 77608.26838496856
+    },
+    {
+      "index_n": 220164,
+      "efSearch": 64,
+      "seconds": [
+        0.44583590000002005,
+        0.4926703000000998,
+        0.5353455000004033
+      ],
+      "median_qps": 40595.09980608928
+    },
+    {
+      "index_n": 220164,
+      "efSearch": 128,
+      "seconds": [
+        0.9724685000001045,
+        0.9687936999998783,
+        0.9830174999997325
+      ],
+      "median_qps": 20566.218854387418
+    },
+    {
+      "index_n": 220164,
+      "efSearch": 256,
+      "seconds": [
+        1.7975502999997843,
+        1.7924870000001647,
+        1.6315561000001253
+      ],
+      "median_qps": 11157.682036186685
+    },
+    {
+      "index_n": 65078,
+      "efSearch": 16,
+      "seconds": [
+        0.11236879999978555,
+        0.1139789000003475,
+        0.11044529999981023
+      ],
+      "median_qps": 177985.34824647204
+    },
+    {
+      "index_n": 65078,
+      "efSearch": 32,
+      "seconds": [
+        0.18050570000013977,
+        0.18056750000005195,
+        0.17898920000016005
+      ],
+      "median_qps": 110799.82515779011
+    },
+    {
+      "index_n": 65078,
+      "efSearch": 64,
+      "seconds": [
+        0.3050695000001724,
+        0.3053586999999425,
+        0.3079247000000578
+      ],
+      "median_qps": 65496.742028322
+    },
+    {
+      "index_n": 65078,
+      "efSearch": 128,
+      "seconds": [
+        0.5546543000000383,
+        0.5536274000000958,
+        0.551620599999751
+      ],
+      "median_qps": 36125.379632576965
+    },
+    {
+      "index_n": 65078,
+      "efSearch": 256,
+      "seconds": [
+        1.0489566999999624,
+        1.0514823999997134,
+        1.0542789999999513
+      ],
+      "median_qps": 19020.76534995303
+    }
+  ],
+  "limitations": "One construction per representation; three timing repeats, not three builds. New embeddings/runtime; excludes label-map evaluation time from QPS as in the archive."
+}

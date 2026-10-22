@@ -1,0 +1,27 @@
+{
+  "status": "complete",
+  "seconds": 55.10927129999618,
+  "peak_rss_bytes": 234864640,
+  "seed": 2,
+  "threads": 8,
+  "packages": {
+    "faiss-cpu": "1.10.0",
+    "hnswlib": "0.8.0",
+    "diskannpy": "0.7.0",
+    "numpy": "1.25.0",
+    "scipy": "1.15.3"
+  },
+  "source_sha256": "2d04a43cbab0d3d66735a595cc6444c3c9f50fe03e0ca181fd8ae9dd95c018da",
+  "executed_sha256": "0890e421556f7135f6644be53d3fd2c5c93e812b14cef28c00d91d43e7fcf0ba",
+  "wrapper_sha256": "07c52b9fd4a89b59f5acd7874a9758f87166ff56ca1f7c588405571485e3ec13",
+  "changes": [
+    "Isolated outputs",
+    "Explicit eight threads including hnswlib calls",
+    "Seed supplied by environment",
+    "DiskANN calls isolated in workers to avoid conflicting OpenMP runtimes; arguments unchanged"
+  ],
+  "limitations": [
+    "New runtime; archived outputs retained",
+    "Parallel graph construction is not bitwise deterministic"
+  ]
+}

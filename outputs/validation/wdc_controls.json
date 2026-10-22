@@ -1,0 +1,54 @@
+{
+  "orig_all": {
+    "avg_vectors_per_entity": 13.85,
+    "index_size": 276933,
+    "hnsw": {
+      "50": 0.4051,
+      "200": 0.413
+    },
+    "ivf": {
+      "16": 0.9597,
+      "64": 0.9706
+    },
+    "indeg_max": 52729
+  },
+  "no_empty": {
+    "avg_vectors_per_entity": 16.67,
+    "index_size": 333347,
+    "hnsw": {
+      "50": 0.6691,
+      "200": 0.6893
+    },
+    "ivf": {
+      "16": 0.9393,
+      "64": 0.9554
+    },
+    "indeg_max": 25275
+  },
+  "no_empty_cap": {
+    "avg_vectors_per_entity": 10.19,
+    "index_size": 203741,
+    "hnsw": {
+      "50": 0.7577,
+      "200": 0.7827
+    },
+    "ivf": {
+      "16": 0.9408,
+      "64": 0.9557
+    },
+    "indeg_max": 3355
+  },
+  "cap_only": {
+    "avg_vectors_per_entity": 9.76,
+    "index_size": 195264,
+    "hnsw": {
+      "50": 0.5162,
+      "200": 0.5322
+    },
+    "ivf": {
+      "16": 0.9592,
+      "64": 0.9706
+    },
+    "indeg_max": 50328
+  }
+}

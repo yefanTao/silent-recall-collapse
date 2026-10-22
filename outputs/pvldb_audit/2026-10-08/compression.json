@@ -1,0 +1,109 @@
+{
+  "config": {
+    "suite": "compression",
+    "seeds": [
+      0
+    ],
+    "threads": 8,
+    "nq": 2000,
+    "output": "outputs/pvldb_audit/2026-10-08",
+    "data": "data/wdc_full"
+  },
+  "k": 10,
+  "epsilons": [
+    0.0,
+    1e-07,
+    1e-06,
+    1e-05
+  ],
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.14",
+    "cpu": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+    "logical_cpus": 24,
+    "ram_bytes": 34043850752,
+    "packages": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "faiss-cpu": "1.15.1",
+      "pandas": "3.0.6",
+      "psutil": "7.2.2"
+    },
+    "faiss_compile_options": ""
+  },
+  "base_commit": "b8b409321e420d0af15007f1cfe69e7f911832d0",
+  "audit_script_sha256": "8fd768dbe1c5050468130a5548b7bd4b8fc0756baf8702760b10c24b4c0252a8",
+  "status": "complete",
+  "rows": [
+    {
+      "case": "full",
+      "seed": 0,
+      "d": 128,
+      "n": 210000,
+      "index": "hnsw",
+      "nq": 2000,
+      "metrics": {
+        "id_recall": 0.9994000000000001,
+        "tie_recall_eps_0": 0.9994000000000001,
+        "tie_recall_eps_1e-07": 0.9994000000000001,
+        "tie_recall_eps_1e-06": 0.9994000000000001,
+        "tie_recall_eps_1e-05": 0.9994000000000001
+      },
+      "original_full_vector_task": {
+        "id_recall": 0.9994000000000001,
+        "tie_recall_eps_0": 0.9994000000000001,
+        "tie_recall_eps_1e-07": 0.9994000000000001,
+        "tie_recall_eps_1e-06": 0.9994000000000001,
+        "tie_recall_eps_1e-05": 0.9994000000000001
+      },
+      "original_full_entity_top10_recall": 0.9997,
+      "reduced_exact_original_vector_task": {
+        "id_recall": 0.5191500000000001,
+        "tie_recall_eps_0": 0.5191500000000001,
+        "tie_recall_eps_1e-07": 0.5191500000000001,
+        "tie_recall_eps_1e-06": 0.5191500000000001,
+        "tie_recall_eps_1e-05": 0.51935
+      },
+      "vector_payload_bytes": 107520000,
+      "serialized_index_bytes": 137810874,
+      "representative_original_id_mapping_bytes": 0,
+      "seconds": 9.24485609983094
+    },
+    {
+      "case": "reduced",
+      "seed": 0,
+      "d": 128,
+      "n": 70000,
+      "index": "hnsw",
+      "nq": 2000,
+      "metrics": {
+        "id_recall": 1.0,
+        "tie_recall_eps_0": 1.0,
+        "tie_recall_eps_1e-07": 1.0,
+        "tie_recall_eps_1e-06": 1.0,
+        "tie_recall_eps_1e-05": 1.0
+      },
+      "original_full_vector_task": {
+        "id_recall": 0.5191500000000001,
+        "tie_recall_eps_0": 0.5191500000000001,
+        "tie_recall_eps_1e-07": 0.5191500000000001,
+        "tie_recall_eps_1e-06": 0.5191500000000001,
+        "tie_recall_eps_1e-05": 0.51935
+      },
+      "original_full_entity_top10_recall": 0.9701500000000001,
+      "reduced_exact_original_vector_task": {
+        "id_recall": 0.5191500000000001,
+        "tie_recall_eps_0": 0.5191500000000001,
+        "tie_recall_eps_1e-07": 0.5191500000000001,
+        "tie_recall_eps_1e-06": 0.5191500000000001,
+        "tie_recall_eps_1e-05": 0.51935
+      },
+      "vector_payload_bytes": 35840000,
+      "serialized_index_bytes": 45931514,
+      "representative_original_id_mapping_bytes": 560000,
+      "seconds": 2.503942299867049
+    }
+  ],
+  "elapsed_seconds": 15.967201500199735,
+  "peak_process_rss_bytes": 606003200
+}

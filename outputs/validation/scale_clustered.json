@@ -1,0 +1,105 @@
+{
+  "config": {
+    "D": 128,
+    "RANK": 16,
+    "NCLUST": 2000,
+    "K": 10,
+    "SINK_FRAC": 0.3,
+    "SEED": 0,
+    "N_list": [
+      100000,
+      500000,
+      2000000,
+      5000000,
+      10000000
+    ],
+    "NQ": 5000,
+    "IVF_PROBE_FRAC": 0.05,
+    "design": "clustered low-rank background keeps clean HNSW recall high; marginal hub damage at matched N"
+  },
+  "points": [
+    {
+      "N": 100000,
+      "n_with_hub": 130000,
+      "hnsw_clean": 0.9999,
+      "hnsw_hub": 0.9537,
+      "hnsw_drop": 0.0462,
+      "ivf_clean": 0.9999,
+      "ivf_hub": 0.9999,
+      "ivf_drop": 0.0,
+      "max_indeg_clean": 78,
+      "max_indeg_hub": 29937,
+      "build_search_s": 10.5
+    },
+    {
+      "N": 500000,
+      "n_with_hub": 650000,
+      "hnsw_clean": 0.9972,
+      "hnsw_hub": 0.9949,
+      "hnsw_drop": 0.0023,
+      "ivf_clean": 0.9998,
+      "ivf_hub": 0.9998,
+      "ivf_drop": 0.0,
+      "max_indeg_clean": 128,
+      "max_indeg_hub": 149928,
+      "build_search_s": 52.0
+    },
+    {
+      "N": 2000000,
+      "n_with_hub": 2600000,
+      "hnsw_clean": 0.9754,
+      "hnsw_hub": 0.9735,
+      "hnsw_drop": 0.0019,
+      "ivf_clean": 0.9998,
+      "ivf_hub": 0.9998,
+      "ivf_drop": 0.0,
+      "max_indeg_clean": 267,
+      "max_indeg_hub": 599963,
+      "build_search_s": 415.5
+    },
+    {
+      "N": 5000000,
+      "n_with_hub": 6500000,
+      "hnsw_clean": 0.9319,
+      "hnsw_hub": 0.9298,
+      "hnsw_drop": 0.0021,
+      "ivf_clean": 0.9995,
+      "ivf_hub": 0.9995,
+      "ivf_drop": 0.0,
+      "max_indeg_clean": 394,
+      "max_indeg_hub": 1499971,
+      "build_search_s": 863.7
+    },
+    {
+      "N": 10000000,
+      "n_with_hub": 13000000,
+      "hnsw_clean": 0.8564,
+      "hnsw_hub": 0.8454,
+      "hnsw_drop": 0.011,
+      "ivf_clean": 0.9997,
+      "ivf_hub": 0.9997,
+      "ivf_drop": 0.0,
+      "max_indeg_clean": 595,
+      "max_indeg_hub": 2999969,
+      "build_search_s": 1337.9
+    }
+  ],
+  "verdict": {
+    "clean_hnsw_recall_range": [
+      0.8564,
+      0.9999
+    ],
+    "clean_baseline_stable": true,
+    "hnsw_hub_drop_range": [
+      0.0019,
+      0.0462
+    ],
+    "ivf_hub_drop_range": [
+      0.0,
+      0.0
+    ],
+    "hnsw_marginal_damage_persists": false,
+    "ivf_marginally_immune": true,
+    "interpretation": "With a stable clean baseline (clustered low-rank data, like real embeddings), the mega-hub's marginal damage to HNSW is isolated from the 'task gets harder' confound. If hnsw_drop stays large and ivf_drop ~0 up to millions of points, the pathology and IVF immunity are scale-robust on realistic data."
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "config": {
+    "n_full": 947584,
+    "n_queries": 20000,
+    "K": 10,
+    "dim": 384,
+    "omp_threads": 96,
+    "ef_sweep": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "hnsw": "M=16 efConstruction=200"
+  },
+  "full_hnsw": [
+    {
+      "ef": 16,
+      "recall": 0.658,
+      "qps": 138643.9,
+      "bytes": 1592188602,
+      "n": 947584,
+      "build_s": 25.0
+    },
+    {
+      "ef": 32,
+      "recall": 0.68,
+      "qps": 81071.2,
+      "bytes": 1592188602,
+      "n": 947584,
+      "build_s": 25.0
+    },
+    {
+      "ef": 64,
+      "recall": 0.7011,
+      "qps": 43815.2,
+      "bytes": 1592188602,
+      "n": 947584,
+      "build_s": 25.0
+    },
+    {
+      "ef": 128,
+      "recall": 0.7156,
+      "qps": 23500.3,
+      "bytes": 1592188602,
+      "n": 947584,
+      "build_s": 25.0
+    },
+    {
+      "ef": 256,
+      "recall": 0.7229,
+      "qps": 12547.4,
+      "bytes": 1592188602,
+      "n": 947584,
+      "build_s": 25.0
+    }
+  ],
+  "dedup_hnsw": [
+    {
+      "ef": 16,
+      "recall_multilabel": 0.8668,
+      "recall_singlelabel": 0.821,
+      "qps": 108513.6,
+      "bytes": 367547306,
+      "n": 218740,
+      "build_s": 7.2
+    },
+    {
+      "ef": 32,
+      "recall_multilabel": 0.8773,
+      "recall_singlelabel": 0.8314,
+      "qps": 66188.4,
+      "bytes": 367547306,
+      "n": 218740,
+      "build_s": 7.2
+    },
+    {
+      "ef": 64,
+      "recall_multilabel": 0.8821,
+      "recall_singlelabel": 0.8361,
+      "qps": 36916.5,
+      "bytes": 367547306,
+      "n": 218740,
+      "build_s": 7.2
+    },
+    {
+      "ef": 128,
+      "recall_multilabel": 0.885,
+      "recall_singlelabel": 0.8391,
+      "qps": 18994.8,
+      "bytes": 367547306,
+      "n": 218740,
+      "build_s": 7.2
+    },
+    {
+      "ef": 256,
+      "recall_multilabel": 0.8856,
+      "recall_singlelabel": 0.8397,
+      "qps": 10339.8,
+      "bytes": 367547306,
+      "n": 218740,
+      "build_s": 7.2
+    }
+  ],
+  "dedup_stats": {
+    "n_dedup": 218740,
+    "reduction_vs_full": 4.332,
+    "unique_vectors_shared_by_multiple_entities": 3464
+  },
+  "reduced_hnsw": [
+    {
+      "ef": 16,
+      "recall": 0.842,
+      "qps": 168887.5,
+      "bytes": 109349954,
+      "n": 65078,
+      "build_s": 1.2
+    },
+    {
+      "ef": 32,
+      "recall": 0.8523,
+      "qps": 93796.2,
+      "bytes": 109349954,
+      "n": 65078,
+      "build_s": 1.2
+    },
+    {
+      "ef": 64,
+      "recall": 0.8579,
+      "qps": 49551.3,
+      "bytes": 109349954,
+      "n": 65078,
+      "build_s": 1.2
+    },
+    {
+      "ef": 128,
+      "recall": 0.8605,
+      "qps": 26606.3,
+      "bytes": 109349954,
+      "n": 65078,
+      "build_s": 1.2
+    },
+    {
+      "ef": 256,
+      "recall": 0.8619,
+      "qps": 14032.5,
+      "bytes": 109349954,
+      "n": 65078,
+      "build_s": 1.2
+    }
+  ],
+  "ratios": {
+    "full_over_reduced_vectors": 14.56,
+    "dedup_over_reduced_vectors": 3.36,
+    "full_over_reduced_bytes": 14.56,
+    "dedup_over_reduced_bytes": 3.36,
+    "best_recall": {
+      "full": 0.7229,
+      "dedup_multilabel": 0.8856,
+      "dedup_singlelabel": 0.8397,
+      "reduced": 0.8619
+    }
+  }
+}

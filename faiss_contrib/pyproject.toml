@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "faiss-entity-index"
+version = "0.1.0"
+description = "Entity-level vector reduction for Faiss with explicit group-to-record mappings."
+readme = { text = "Entity-level vector reduction for Faiss. See README.md in the artifact root for installation and experiments.", content-type = "text/plain" }
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "entity-index contributors" }]
+keywords = ["faiss", "ann", "hnsw", "near-duplicate", "deduplication", "vector-search"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+# faiss-cpu is on PyPI and installs cleanly. If you ALREADY have faiss (e.g.
+# faiss-gpu), install this with `pip install --no-deps .` and add numpy/pyarrow
+# yourself, to avoid pulling a second faiss build.
+dependencies = [
+  "numpy>=1.21",
+  "faiss-cpu>=1.8",
+  "pyarrow>=10",          # demo: read the public ann-benchmark parquet mirror
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.4"]
+test = ["pytest>=7"]
+
+
+[project.scripts]
+# `entity-index-demo` -> few-minute public-data reproduction (download + verify)
+entity-index-demo = "demo_public:main"
+
+[tool.setuptools]
+py-modules = ["entity_index", "demo_public"]

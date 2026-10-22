@@ -1,0 +1,29 @@
+{
+  "config": {
+    "output": "outputs/pvldb_audit/2026-10-18",
+    "n_base": 20000,
+    "dimension": 128,
+    "sink_ratio": 0.5,
+    "seed": 0,
+    "threads": 8,
+    "timeout_seconds": 60.0
+  },
+  "rows": [
+    {
+      "status": "complete",
+      "seconds": 1.32111729999815,
+      "n": 20000,
+      "faiss": "1.15.1",
+      "case": "clean",
+      "sink_base_ratio": 0.0
+    },
+    {
+      "status": "timeout",
+      "limit_seconds": 60.0,
+      "case": "duplicate",
+      "sink_base_ratio": 0.5
+    }
+  ],
+  "source_sha256": "3d86cd9918b61ff828113b60c79d7b9947b3a6ded5ea47ebc78dbe877cfa238b",
+  "interpretation": "Duplicate-injected build exceeded the specified limit; not a proof of nontermination."
+}

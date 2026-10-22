@@ -1,0 +1,48 @@
+{
+  "config": {
+    "D": 128,
+    "N_BASE": 20000,
+    "SINK_FRAC": 0.3,
+    "K": 10,
+    "n": 26000,
+    "n_sink": 6000
+  },
+  "results": {
+    "collapsed": {
+      "recall": 0.6548,
+      "max_indeg": 5985
+    },
+    "R2_sever_sink_outedges": {
+      "recall": 0.6559,
+      "max_indeg": 4098,
+      "edges_touched": 192000
+    },
+    "R1_prune_cap16": {
+      "recall": 0.0082,
+      "max_indeg": 16,
+      "edges_touched": 359183
+    },
+    "R1_prune_cap32": {
+      "recall": 0.2625,
+      "max_indeg": 32,
+      "edges_touched": 91040
+    },
+    "R1_prune_cap64": {
+      "recall": 0.6556,
+      "max_indeg": 64,
+      "edges_touched": 32216
+    },
+    "dedup_rebuild_upperbound": {
+      "recall": 0.9756,
+      "n_after": 20001
+    }
+  },
+  "verdict": {
+    "collapsed_recall": 0.6548,
+    "dedup_rebuild_recall": 0.9756,
+    "best_inplace_repair_recall": 0.6559,
+    "fraction_of_gap_recovered_inplace": 0.003,
+    "inplace_repair_viable": false,
+    "interpretation": "fraction_of_gap_recovered_inplace = how much of the (rebuild - collapsed) recall gap a cheap in-place graph edit recovers WITHOUT re-inserting data. >0.5 would be a genuinely useful online remedy for an index you cannot rebuild; near 0 means the collapse is baked into the built graph and only rebuild/dedup helps."
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "config": {
+    "model": "all-MiniLM-L6-v2",
+    "N": 336827,
+    "D": 384,
+    "K": 10,
+    "NQ": 5000,
+    "SEED": 0,
+    "entities": 27052,
+    "exact_dup_rows": 195808,
+    "exact_dup_frac": 0.5813
+  },
+  "redundancy_sweep": [
+    {
+      "R": 1,
+      "n": 27052,
+      "max_indeg": 81,
+      "hnsw_recall": 0.9947,
+      "ivf_recall": 0.9982
+    },
+    {
+      "R": 2,
+      "n": 54104,
+      "max_indeg": 76,
+      "hnsw_recall": 0.9852,
+      "ivf_recall": 0.9964
+    },
+    {
+      "R": 3,
+      "n": 81156,
+      "max_indeg": 98,
+      "hnsw_recall": 0.9693,
+      "ivf_recall": 0.9961
+    },
+    {
+      "R": 5,
+      "n": 114009,
+      "max_indeg": 104,
+      "hnsw_recall": 0.9592,
+      "ivf_recall": 0.9958
+    },
+    {
+      "R": 8,
+      "n": 146406,
+      "max_indeg": 115,
+      "hnsw_recall": 0.9316,
+      "ivf_recall": 0.9932
+    },
+    {
+      "R": 12,
+      "n": 177661,
+      "max_indeg": 121,
+      "hnsw_recall": 0.9119,
+      "ivf_recall": 0.9941
+    },
+    {
+      "R": "all",
+      "n": 336827,
+      "max_indeg": 254,
+      "hnsw_recall": 0.7933,
+      "ivf_recall": 0.9961
+    }
+  ],
+  "dedup_triad": [
+    {
+      "treatment": "raw",
+      "n": 195000,
+      "max_indeg": 145,
+      "hnsw_recall": 0.8896
+    },
+    {
+      "treatment": "exact np.unique",
+      "n": 91740,
+      "max_indeg": 84,
+      "hnsw_recall": 0.9983
+    },
+    {
+      "treatment": "+ near-dup",
+      "n": 91740,
+      "max_indeg": 85,
+      "hnsw_recall": 0.9981
+    }
+  ],
+  "verdict": {
+    "spearman_logindeg_hnsw_recall": -0.964,
+    "p": 0.000454,
+    "hnsw_recall_full_vs_R1": [
+      0.7933,
+      0.9947
+    ],
+    "ivf_min_recall": 0.9932,
+    "dedup_recovers": [
+      0.8896,
+      0.9983
+    ],
+    "neardup_adds_over_exact": -0.0002,
+    "interpretation": "Third independent real corpus (WDC-Computers, 58% exact-dup). If HNSW recall falls with R while IVF stays flat (rho<<0), and exact np.unique recovers recall while near-dup adds ~0, the in-degree law and the exact-vs-near dichotomy replicate outside the two main-paper corpora."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "n_entities": 15897,
+  "R1_n": 15897,
+  "R12_n": 190764,
+  "all_n": 669768,
+  "archived_expected": {
+    "n_entities": 15897,
+    "R1_n": 15897,
+    "R12_n": 190764,
+    "all_n": 669768
+  },
+  "counts_match_archive": true
+}

@@ -1,0 +1,47 @@
+{
+  "config": {
+    "D": 128,
+    "N_BASE": 20000,
+    "SINK_FRAC": 0.3,
+    "K": 10,
+    "n": 26000,
+    "n_sink": 6000,
+    "n_queries": 2000
+  },
+  "per_ef": {
+    "50": {
+      "recall@1": 0.79,
+      "recall@10": 0.79,
+      "miss_rate": 0.21,
+      "miss_with_hub_in_topk": 0.9952380952380953,
+      "miss_mean_sim_gap": 0.8955850005149841,
+      "miss_frac_nearmiss(gap<0.01)": 0.0,
+      "overall_hub_in_topk": 0.209
+    },
+    "200": {
+      "recall@1": 0.79,
+      "recall@10": 0.79,
+      "miss_rate": 0.21,
+      "miss_with_hub_in_topk": 0.9952380952380953,
+      "miss_mean_sim_gap": 0.8955850005149841,
+      "miss_frac_nearmiss(gap<0.01)": 0.0,
+      "overall_hub_in_topk": 0.209
+    },
+    "500": {
+      "recall@1": 0.79,
+      "recall@10": 0.79,
+      "miss_rate": 0.21,
+      "miss_with_hub_in_topk": 0.9952380952380953,
+      "miss_mean_sim_gap": 0.8955850005149841,
+      "miss_frac_nearmiss(gap<0.01)": 0.0,
+      "overall_hub_in_topk": 0.209
+    }
+  },
+  "verdict": {
+    "ef_budget_gain_50to500": 0.0,
+    "ef_rescues_substantially": false,
+    "fraction_missed_queries_returning_hub_node": 0.9952,
+    "dominant_mechanism": "TRAP (hub captures candidate budget; runtime cap could help)",
+    "interpretation": "If missed queries frequently return a sink node (hub_trap high) and a larger efSearch rescues recall, the failure is a runtime TRAP -> a hub-cap remedy is plausible. If not, the hub has rewired the graph so the true NN is effectively unreachable -> only dedup/rebuild restores recall."
+  }
+}

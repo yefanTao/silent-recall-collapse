@@ -1,0 +1,280 @@
+{
+  "config": {
+    "D": 128,
+    "N_BASE": 20000,
+    "K": 10,
+    "SEED": 0,
+    "sink_frac": [
+      0.0,
+      0.002,
+      0.005,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.35,
+      0.5
+    ],
+    "graph_degree": 32,
+    "Lbuild": 100,
+    "Lsearch": 100,
+    "note": "DiskANN=Vamana (alpha-RNG diversification pruning), same family as HNSW/NSG"
+  },
+  "points": [
+    {
+      "sink_frac": 0.0,
+      "n": 20000,
+      "diskann": {
+        "recall": 0.9012,
+        "max_indeg": 57,
+        "medoid": 16104,
+        "medoid_is_sink": false,
+        "Lsearch_trap": {
+          "100": 0.9012,
+          "500": 0.9943,
+          "2000": 1.0
+        }
+      },
+      "hnsw": {
+        "recall": 0.9763,
+        "max_indeg": 55
+      },
+      "ivf": {
+        "recall": 0.8372
+      }
+    },
+    {
+      "sink_frac": 0.002,
+      "n": 20040,
+      "diskann": {
+        "recall": 0.9014,
+        "max_indeg": 66,
+        "medoid": 16104,
+        "medoid_is_sink": false,
+        "Lsearch_trap": {
+          "100": 0.9014,
+          "500": 0.9942,
+          "2000": 0.9996
+        }
+      },
+      "hnsw": {
+        "recall": 0.9724,
+        "max_indeg": 54
+      },
+      "ivf": {
+        "recall": 0.8347
+      }
+    },
+    {
+      "sink_frac": 0.005,
+      "n": 20100,
+      "diskann": {
+        "recall": 0.0,
+        "max_indeg": 439,
+        "medoid": 20000,
+        "medoid_is_sink": true,
+        "Lsearch_trap": {
+          "100": 0.0,
+          "500": 0.0,
+          "2000": 0.0
+        }
+      },
+      "hnsw": {
+        "recall": 0.9702,
+        "max_indeg": 95
+      },
+      "ivf": {
+        "recall": 0.8362
+      }
+    },
+    {
+      "sink_frac": 0.01,
+      "n": 20200,
+      "diskann": {
+        "recall": 0.0,
+        "max_indeg": 527,
+        "medoid": 20000,
+        "medoid_is_sink": true,
+        "Lsearch_trap": {
+          "100": 0.0,
+          "500": 0.0,
+          "2000": 0.0
+        }
+      },
+      "hnsw": {
+        "recall": 0.968,
+        "max_indeg": 191
+      },
+      "ivf": {
+        "recall": 0.834
+      }
+    },
+    {
+      "sink_frac": 0.02,
+      "n": 20400,
+      "diskann": {
+        "recall": 0.0,
+        "max_indeg": 765,
+        "medoid": 20000,
+        "medoid_is_sink": true,
+        "Lsearch_trap": {
+          "100": 0.0,
+          "500": 0.0,
+          "2000": 0.0
+        }
+      },
+      "hnsw": {
+        "recall": 0.8969,
+        "max_indeg": 590
+      },
+      "ivf": {
+        "recall": 0.834
+      }
+    },
+    {
+      "sink_frac": 0.05,
+      "n": 21000,
+      "diskann": {
+        "recall": 0.0,
+        "max_indeg": 3764,
+        "medoid": 20000,
+        "medoid_is_sink": true,
+        "Lsearch_trap": {
+          "100": 0.0,
+          "500": 0.0,
+          "2000": 0.0
+        }
+      },
+      "hnsw": {
+        "recall": 0.833,
+        "max_indeg": 1168
+      },
+      "ivf": {
+        "recall": 0.8305
+      }
+    },
+    {
+      "sink_frac": 0.1,
+      "n": 22000,
+      "diskann": {
+        "recall": 0.0,
+        "max_indeg": 4661,
+        "medoid": 20000,
+        "medoid_is_sink": true,
+        "Lsearch_trap": {
+          "100": 0.0,
+          "500": 0.0,
+          "2000": 0.0
+        }
+      },
+      "hnsw": {
+        "recall": 0.8486,
+        "max_indeg": 1961
+      },
+      "ivf": {
+        "recall": 0.8234
+      }
+    },
+    {
+      "sink_frac": 0.2,
+      "n": 24000,
+      "diskann": {
+        "recall": 0.0,
+        "max_indeg": 6789,
+        "medoid": 20000,
+        "medoid_is_sink": true,
+        "Lsearch_trap": {
+          "100": 0.0,
+          "500": 0.0,
+          "2000": 0.0
+        }
+      },
+      "hnsw": {
+        "recall": 0.6959,
+        "max_indeg": 3915
+      },
+      "ivf": {
+        "recall": 0.8138
+      }
+    },
+    {
+      "sink_frac": 0.35,
+      "n": 27000,
+      "diskann": {
+        "recall": 0.0,
+        "max_indeg": 9853,
+        "medoid": 20000,
+        "medoid_is_sink": true,
+        "Lsearch_trap": {
+          "100": 0.0,
+          "500": 0.0,
+          "2000": 0.0
+        }
+      },
+      "hnsw": {
+        "recall": 0.6794,
+        "max_indeg": 6851
+      },
+      "ivf": {
+        "recall": 0.7997
+      }
+    },
+    {
+      "sink_frac": 0.5,
+      "n": 30000,
+      "diskann": {
+        "recall": 0.0,
+        "max_indeg": 13029,
+        "medoid": 20000,
+        "medoid_is_sink": true,
+        "Lsearch_trap": {
+          "100": 0.0,
+          "500": 0.0,
+          "2000": 0.0
+        }
+      },
+      "hnsw": {
+        "recall": 0.6791,
+        "max_indeg": 9913
+      },
+      "ivf": {
+        "recall": 0.7854
+      }
+    }
+  ],
+  "verdict": {
+    "diskann": {
+      "spearman_logindeg_recall": -0.683,
+      "p": 0.0294,
+      "min_recall": 0.0,
+      "max_indeg": 13029
+    },
+    "hnsw": {
+      "spearman_logindeg_recall": -0.976,
+      "p": 1.47e-06,
+      "min_recall": 0.6791,
+      "max_indeg": 9913
+    },
+    "ivf": {
+      "min_recall": 0.7854,
+      "immune": false
+    },
+    "diskann_indeg_blows_up": true,
+    "collapse_is_entry_point_capture": {
+      "medoid_becomes_sink_at_frac": 0.005,
+      "last_clean_medoid_frac": 0.002,
+      "note": "Vamana uses a SINGLE medoid entry point; once the duplicate sink is the densest region the medoid itself lands inside it, so every search starts trapped."
+    },
+    "collapse_is_a_trap": {
+      "at_frac": 0.005,
+      "Lsearch_sweep": {
+        "100": 0.0,
+        "500": 0.0,
+        "2000": 0.0
+      },
+      "rescued_by_Lsearch": false
+    },
+    "interpretation": "DiskANN/Vamana (alpha-RNG diversification pruning, same family as HNSW/NSG) confirms the in-degree blow-up: max in-degree climbs with the duplicate sink. But Vamana collapses HARDER and as a CLIFF, not a gradient: its SINGLE medoid entry point is captured by the densest region (the sink) once duplication exceeds ~0.5%, so recall drops to ~0 and a larger Lsearch cannot rescue it (a trap, cf. the HNSW failure-mode analysis). The mega-hub pathology thus spans a THIRD real graph family; the in-degree marker generalizes while the exact failure geometry (entry-point capture vs. budget exhaustion) is index-specific. Contrast NNDescent (multi_index.json), whose in-degree barely moves."
+  }
+}

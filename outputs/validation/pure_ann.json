@@ -1,0 +1,294 @@
+{
+  "config": {
+    "n_entities": 15897,
+    "n_queries": 15897,
+    "K": 10,
+    "ef_list": [
+      50,
+      100,
+      200
+    ],
+    "nprobe_list": [
+      16,
+      32,
+      64
+    ],
+    "R_list": [
+      "1",
+      "2",
+      "3",
+      "5",
+      "8",
+      "12",
+      "all"
+    ]
+  },
+  "levels": {
+    "1": {
+      "avg_vectors_per_entity": 1.0,
+      "index_size": 15897,
+      "hnsw": {
+        "50": {
+          "ann_recall@10": 0.9086,
+          "nn1_found@10": 0.9092
+        },
+        "100": {
+          "ann_recall@10": 0.9111,
+          "nn1_found@10": 0.9111
+        },
+        "200": {
+          "ann_recall@10": 0.9121,
+          "nn1_found@10": 0.9122
+        }
+      },
+      "ivf": {
+        "16": {
+          "ann_recall@10": 0.9806,
+          "nn1_found@10": 0.9948
+        },
+        "32": {
+          "ann_recall@10": 0.9883,
+          "nn1_found@10": 0.9975
+        },
+        "64": {
+          "ann_recall@10": 0.9923,
+          "nn1_found@10": 0.9993
+        }
+      },
+      "hnsw_indegree": {
+        "indeg_mean": 16.626470403220733,
+        "indeg_max": 240,
+        "indeg_p99": 51.0,
+        "gini": 0.31818579928090274
+      }
+    },
+    "2": {
+      "avg_vectors_per_entity": 2.0,
+      "index_size": 31794,
+      "hnsw": {
+        "50": {
+          "ann_recall@10": 0.8702,
+          "nn1_found@10": 0.877
+        },
+        "100": {
+          "ann_recall@10": 0.8749,
+          "nn1_found@10": 0.8807
+        },
+        "200": {
+          "ann_recall@10": 0.8772,
+          "nn1_found@10": 0.8831
+        }
+      },
+      "ivf": {
+        "16": {
+          "ann_recall@10": 0.97,
+          "nn1_found@10": 0.9958
+        },
+        "32": {
+          "ann_recall@10": 0.9756,
+          "nn1_found@10": 0.9979
+        },
+        "64": {
+          "ann_recall@10": 0.9787,
+          "nn1_found@10": 0.9994
+        }
+      },
+      "hnsw_indegree": {
+        "indeg_mean": 16.56963578033591,
+        "indeg_max": 499,
+        "indeg_p99": 52.0,
+        "gini": 0.337163809471247
+      }
+    },
+    "3": {
+      "avg_vectors_per_entity": 3.0,
+      "index_size": 47691,
+      "hnsw": {
+        "50": {
+          "ann_recall@10": 0.8503,
+          "nn1_found@10": 0.869
+        },
+        "100": {
+          "ann_recall@10": 0.8541,
+          "nn1_found@10": 0.873
+        },
+        "200": {
+          "ann_recall@10": 0.8561,
+          "nn1_found@10": 0.8754
+        }
+      },
+      "ivf": {
+        "16": {
+          "ann_recall@10": 0.9521,
+          "nn1_found@10": 0.9964
+        },
+        "32": {
+          "ann_recall@10": 0.9572,
+          "nn1_found@10": 0.9984
+        },
+        "64": {
+          "ann_recall@10": 0.9598,
+          "nn1_found@10": 0.9994
+        }
+      },
+      "hnsw_indegree": {
+        "indeg_mean": 16.278983455997988,
+        "indeg_max": 1157,
+        "indeg_p99": 54.0,
+        "gini": 0.3432677867792664
+      }
+    },
+    "5": {
+      "avg_vectors_per_entity": 5.0,
+      "index_size": 79485,
+      "hnsw": {
+        "50": {
+          "ann_recall@10": 0.8363,
+          "nn1_found@10": 0.8529
+        },
+        "100": {
+          "ann_recall@10": 0.8422,
+          "nn1_found@10": 0.8593
+        },
+        "200": {
+          "ann_recall@10": 0.8447,
+          "nn1_found@10": 0.8618
+        }
+      },
+      "ivf": {
+        "16": {
+          "ann_recall@10": 0.9631,
+          "nn1_found@10": 0.997
+        },
+        "32": {
+          "ann_recall@10": 0.9673,
+          "nn1_found@10": 0.9986
+        },
+        "64": {
+          "ann_recall@10": 0.9696,
+          "nn1_found@10": 0.9992
+        }
+      },
+      "hnsw_indegree": {
+        "indeg_mean": 16.658199660313265,
+        "indeg_max": 1230,
+        "indeg_p99": 58.0,
+        "gini": 0.34019155392069766
+      }
+    },
+    "8": {
+      "avg_vectors_per_entity": 8.0,
+      "index_size": 127176,
+      "hnsw": {
+        "50": {
+          "ann_recall@10": 0.7817,
+          "nn1_found@10": 0.8308
+        },
+        "100": {
+          "ann_recall@10": 0.7917,
+          "nn1_found@10": 0.841
+        },
+        "200": {
+          "ann_recall@10": 0.7961,
+          "nn1_found@10": 0.8459
+        }
+      },
+      "ivf": {
+        "16": {
+          "ann_recall@10": 0.9295,
+          "nn1_found@10": 0.9971
+        },
+        "32": {
+          "ann_recall@10": 0.9328,
+          "nn1_found@10": 0.9984
+        },
+        "64": {
+          "ann_recall@10": 0.9347,
+          "nn1_found@10": 0.9994
+        }
+      },
+      "hnsw_indegree": {
+        "indeg_mean": 17.29147795181481,
+        "indeg_max": 1983,
+        "indeg_p99": 60.0,
+        "gini": 0.3263889057952578
+      }
+    },
+    "12": {
+      "avg_vectors_per_entity": 12.0,
+      "index_size": 190764,
+      "hnsw": {
+        "50": {
+          "ann_recall@10": 0.7583,
+          "nn1_found@10": 0.7807
+        },
+        "100": {
+          "ann_recall@10": 0.7672,
+          "nn1_found@10": 0.7903
+        },
+        "200": {
+          "ann_recall@10": 0.7727,
+          "nn1_found@10": 0.7957
+        }
+      },
+      "ivf": {
+        "16": {
+          "ann_recall@10": 0.9703,
+          "nn1_found@10": 0.9971
+        },
+        "32": {
+          "ann_recall@10": 0.9724,
+          "nn1_found@10": 0.998
+        },
+        "64": {
+          "ann_recall@10": 0.9739,
+          "nn1_found@10": 0.9986
+        }
+      },
+      "hnsw_indegree": {
+        "indeg_mean": 18.475393680149296,
+        "indeg_max": 3653,
+        "indeg_p99": 60.0,
+        "gini": 0.30636054408348556
+      }
+    },
+    "all": {
+      "avg_vectors_per_entity": 42.132,
+      "index_size": 669768,
+      "hnsw": {
+        "50": {
+          "ann_recall@10": 0.4882,
+          "nn1_found@10": 0.5027
+        },
+        "100": {
+          "ann_recall@10": 0.499,
+          "nn1_found@10": 0.5133
+        },
+        "200": {
+          "ann_recall@10": 0.5079,
+          "nn1_found@10": 0.5229
+        }
+      },
+      "ivf": {
+        "16": {
+          "ann_recall@10": 0.9764,
+          "nn1_found@10": 0.9962
+        },
+        "32": {
+          "ann_recall@10": 0.9779,
+          "nn1_found@10": 0.9968
+        },
+        "64": {
+          "ann_recall@10": 0.9793,
+          "nn1_found@10": 0.9973
+        }
+      },
+      "hnsw_indegree": {
+        "indeg_mean": 23.352983421124925,
+        "indeg_max": 25264,
+        "indeg_p99": 149.0,
+        "gini": 0.5030222689705623
+      }
+    }
+  }
+}

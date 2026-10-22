@@ -1,0 +1,58 @@
+{
+  "config": {
+    "D": 128,
+    "RANK": 16,
+    "NGROUP": 20000,
+    "R": 8,
+    "NCLEAN": 50000,
+    "COS": 0.99,
+    "K": 10,
+    "NQ": 5000,
+    "SEED": 0,
+    "PQ_M": 16,
+    "PQ_BITS": 8,
+    "exact_dup_rows_in_full": 0
+  },
+  "points": [
+    {
+      "label": "Full-HNSW",
+      "n": 210000,
+      "recall": 1.0,
+      "bytes": 107520000,
+      "compress": "none"
+    },
+    {
+      "label": "PQ-only(IVFPQ)",
+      "n": 210000,
+      "recall": 0.4783,
+      "bytes": 3360000,
+      "compress": "pq"
+    },
+    {
+      "label": "Reduce-HNSW",
+      "n": 70000,
+      "recall": 1.0,
+      "bytes": 35840000,
+      "compress": "reduce"
+    },
+    {
+      "label": "Reduce+PQ",
+      "n": 70000,
+      "recall": 0.563,
+      "bytes": 1120000,
+      "compress": "reduce+pq"
+    }
+  ],
+  "verdict": {
+    "np_unique_is_noop": true,
+    "pq_only_recall": 0.4783,
+    "pq_only_MB": 3.36,
+    "reduce_recall": 1.0,
+    "reduce_MB": 35.84,
+    "reduce_pq_recall": 0.563,
+    "reduce_pq_MB": 1.12,
+    "reduce_vs_pq_mem_ratio": 0.09,
+    "reduce_pq_vs_pq_mem_ratio": 3.0,
+    "interpretation": "Near-dups (cos<1.0) are np.unique-blind. Recall is NOT the axis (settled: \u00a722). If Reduce/Reduce+PQ reaches >= PQ-only recall at materially less memory, near-dup reduction has a real MEMORY value beyond both np.unique and PQ -> nucleus survives as a compression axis. If PQ-only already matches on memory, PQ eats the near-dup redundancy and reduction adds nothing -> the direction is closed."
+  }
+}

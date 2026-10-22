@@ -1,0 +1,97 @@
+{
+  "config": {
+    "n_groups": 4000,
+    "R": 8,
+    "K": 10,
+    "ef": 200,
+    "SEED": 0,
+    "d_list": [
+      32,
+      64,
+      128,
+      384
+    ]
+  },
+  "rows": [
+    {
+      "d": 32,
+      "exact_groups": {
+        "id": 0.8557,
+        "tie_aware": 1.0,
+        "indeg_max": 138,
+        "n": 32000
+      },
+      "jitter_1e-3": {
+        "id": 0.9999,
+        "tie_aware": 1.0,
+        "indeg_max": 77
+      },
+      "np_unique_on_exact": {
+        "id": 1.0,
+        "tie_aware": 1.0,
+        "indeg_max": 42,
+        "n": 4000
+      }
+    },
+    {
+      "d": 64,
+      "exact_groups": {
+        "id": 0.8535,
+        "tie_aware": 0.9998,
+        "indeg_max": 149,
+        "n": 32000
+      },
+      "jitter_1e-3": {
+        "id": 0.9999,
+        "tie_aware": 1.0,
+        "indeg_max": 87
+      },
+      "np_unique_on_exact": {
+        "id": 1.0,
+        "tie_aware": 1.0,
+        "indeg_max": 44,
+        "n": 4000
+      }
+    },
+    {
+      "d": 128,
+      "exact_groups": {
+        "id": 0.8532,
+        "tie_aware": 0.9992,
+        "indeg_max": 138,
+        "n": 32000
+      },
+      "jitter_1e-3": {
+        "id": 0.9997,
+        "tie_aware": 0.9997,
+        "indeg_max": 93
+      },
+      "np_unique_on_exact": {
+        "id": 0.9995,
+        "tie_aware": 0.9995,
+        "indeg_max": 47,
+        "n": 4000
+      }
+    },
+    {
+      "d": 384,
+      "exact_groups": {
+        "id": 0.851,
+        "tie_aware": 0.996,
+        "indeg_max": 137,
+        "n": 32000
+      },
+      "jitter_1e-3": {
+        "id": 0.9989,
+        "tie_aware": 0.9989,
+        "indeg_max": 109
+      },
+      "np_unique_on_exact": {
+        "id": 0.9961,
+        "tie_aware": 0.9961,
+        "indeg_max": 49,
+        "n": 4000
+      }
+    }
+  ]
+}

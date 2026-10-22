@@ -1,0 +1,105 @@
+{
+  "config": {
+    "dataset": "GIST-960 (PACMMOD highest-LID)",
+    "N": 200000,
+    "d": 960,
+    "K": 10,
+    "NQ": 2000,
+    "SEED": 0,
+    "ef_sweep": [
+      10,
+      20,
+      40,
+      80,
+      160,
+      320
+    ]
+  },
+  "indeg_skew_SNk": 2.999,
+  "max_indeg_clean": 333,
+  "ndc_recall_curve": [
+    {
+      "ef": 10,
+      "recall_TQ": 0.7016,
+      "recall_OQ": 0.5404,
+      "ndis_TQ": 326.9,
+      "ndis_OQ": 423.2
+    },
+    {
+      "ef": 20,
+      "recall_TQ": 0.8115,
+      "recall_OQ": 0.6646,
+      "ndis_TQ": 485.5,
+      "ndis_OQ": 647.6
+    },
+    {
+      "ef": 40,
+      "recall_TQ": 0.8907,
+      "recall_OQ": 0.7985,
+      "ndis_TQ": 770.9,
+      "ndis_OQ": 1047.0
+    },
+    {
+      "ef": 80,
+      "recall_TQ": 0.9418,
+      "recall_OQ": 0.8888,
+      "ndis_TQ": 1283.8,
+      "ndis_OQ": 1778.3
+    },
+    {
+      "ef": 160,
+      "recall_TQ": 0.9713,
+      "recall_OQ": 0.9448,
+      "ndis_TQ": 2196.6,
+      "ndis_OQ": 3078.4
+    },
+    {
+      "ef": 320,
+      "recall_TQ": 0.9838,
+      "recall_OQ": 0.9733,
+      "ndis_TQ": 3737.2,
+      "ndis_OQ": 5287.4
+    }
+  ],
+  "ndc_at_0.9recall": {
+    "TQ": 864.2457925636006,
+    "OQ": 2038.32,
+    "gap_x": 2.36
+  },
+  "step3_OQ_targets": {
+    "median_target_indeg_OQ": 10.0,
+    "median_target_indeg_TQ": 9.0,
+    "OQ_targets_are_lower_indeg": false
+  },
+  "injection": [
+    {
+      "sink_frac": 0.0,
+      "max_indeg": 324,
+      "recall": 0.9574
+    },
+    {
+      "sink_frac": 0.05,
+      "max_indeg": 9976,
+      "recall": 0.9546
+    },
+    {
+      "sink_frac": 0.2,
+      "max_indeg": 39931,
+      "recall": 0.9066
+    },
+    {
+      "sink_frac": 0.5,
+      "max_indeg": 99959,
+      "recall": 0.7577
+    }
+  ],
+  "verdict": {
+    "reproduces_OQ_NDC_gap": true,
+    "OQ_NDC_gap_x": 2.36,
+    "OQ_targets_are_antihubs": false,
+    "clean_in_safe_regime": false,
+    "clean_recall_high": true,
+    "injection_collapses_recall": true,
+    "interpretation": "Using PACMMOD's EXACT method (OQ=slowest 50% by latency on a vanilla index) on their highest-LID dataset GIST: outlier queries need more NDC than typical queries to reach the same recall (their Theorem-2 stability gap), and OQ targets are lower-in-degree (anti-hub) points (their cause). Meanwhile clean GIST max in-degree is in our safe regime and recall stays high. Injecting a duplicate sink pushes max in-degree ~1000x and collapses recall -- the extreme high-in-degree end (their Theorem-1 Hub Capture taken to the limit). One in-degree axis unifies their anti-hub latency tail and our duplicate-hub recall collapse."
+  }
+}

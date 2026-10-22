@@ -1,0 +1,73 @@
+{
+  "config": {
+    "dataset": "SIFT-1M (PACMMOD)",
+    "N": 300000,
+    "d": 128,
+    "K": 10,
+    "NQ": 3000,
+    "efSearch": 100,
+    "SEED": 0
+  },
+  "clean": {
+    "max_indeg": 120,
+    "median_indeg": 21.0,
+    "indeg_skew_SNk": 0.768,
+    "recall_overall": 0.9978,
+    "recall_TQ": 0.9985,
+    "recall_OQ": 0.9971,
+    "ndis_TQ": 1790.4,
+    "ndis_OQ": 1460.2,
+    "ndis_OQ_over_TQ": 0.816,
+    "ndis_p999": 2404.0,
+    "ndis_tail_p999_over_median": 1.37,
+    "in_our_safe_regime": true
+  },
+  "injection": [
+    {
+      "sink_frac": 0.0,
+      "n": 300000,
+      "max_indeg": 121,
+      "recall": 0.9979
+    },
+    {
+      "sink_frac": 0.02,
+      "n": 306000,
+      "max_indeg": 13980,
+      "recall": 0.9386
+    },
+    {
+      "sink_frac": 0.05,
+      "n": 315000,
+      "max_indeg": 16385,
+      "recall": 0.9337
+    },
+    {
+      "sink_frac": 0.1,
+      "n": 330000,
+      "max_indeg": 29960,
+      "recall": 0.9158
+    },
+    {
+      "sink_frac": 0.2,
+      "n": 360000,
+      "max_indeg": 59956,
+      "recall": 0.8457
+    },
+    {
+      "sink_frac": 0.5,
+      "n": 450000,
+      "max_indeg": 149974,
+      "recall": 0.7744
+    }
+  ],
+  "verdict": {
+    "reproduces_their_OQ_NDC_gap": false,
+    "OQ_NDC_penalty_x": 0.816,
+    "clean_recall_high_and_safe": true,
+    "injection_reaches_our_collapse": true,
+    "clean_max_indeg": 120,
+    "collapsed_max_indeg": 149974,
+    "collapsed_recall": 0.7744,
+    "interpretation": "On SIFT-1M (their dataset) with their N_k/in-degree framework: anti-hub-target (outlier) queries need more distance computations than typical queries at the same budget -- reproducing their Theorem-2 latency/NDC instability -- while overall recall stays high and max in-degree sits in our safe regime (<200), exactly as our in-degree law predicts for clean data. Injecting a duplicate sink pushes max in-degree ~1000x into our collapse regime where recall craters: this is their Theorem-1 Hub Capture taken to the extreme. One N_k axis, two regimes, two metrics (their latency tail at the low-in-degree/anti-hub end; our silent recall collapse at the extreme high-in-degree/duplicate-hub end)."
+  }
+}

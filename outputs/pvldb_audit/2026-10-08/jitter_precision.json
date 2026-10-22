@@ -1,0 +1,185 @@
+{
+  "purpose": "exploratory precision diagnostic, not instrumented Faiss prune comparisons",
+  "rows": [
+    {
+      "seed": 0,
+      "geometry": "isotropic",
+      "eps": 1e-07,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.651,
+      "float64_cosine_min": 0.9999999999989888,
+      "float64_cosine_mean": 0.9999999999993693,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 0,
+      "geometry": "isotropic",
+      "eps": 1e-05,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.663,
+      "float64_cosine_min": 0.9999999898753498,
+      "float64_cosine_mean": 0.9999999937017235,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 0,
+      "geometry": "isotropic",
+      "eps": 0.001,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.0,
+      "float64_cosine_min": 0.9998989331797968,
+      "float64_cosine_mean": 0.9999370187980653,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 0,
+      "geometry": "low_rank",
+      "eps": 1e-07,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.392,
+      "float64_cosine_min": 0.9999999999998613,
+      "float64_cosine_mean": 0.9999999999999709,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 0,
+      "geometry": "low_rank",
+      "eps": 1e-05,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.631,
+      "float64_cosine_min": 0.999999998615556,
+      "float64_cosine_mean": 0.9999999997139131,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 0,
+      "geometry": "low_rank",
+      "eps": 0.001,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.007,
+      "float64_cosine_min": 0.999986154539843,
+      "float64_cosine_mean": 0.9999971392289096,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 1,
+      "geometry": "isotropic",
+      "eps": 1e-07,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.731,
+      "float64_cosine_min": 0.9999999999989146,
+      "float64_cosine_mean": 0.9999999999993702,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 1,
+      "geometry": "isotropic",
+      "eps": 1e-05,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.673,
+      "float64_cosine_min": 0.9999999890565014,
+      "float64_cosine_mean": 0.9999999937096076,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 1,
+      "geometry": "isotropic",
+      "eps": 0.001,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.0,
+      "float64_cosine_min": 0.9998907679362931,
+      "float64_cosine_mean": 0.9999370947479485,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 1,
+      "geometry": "low_rank",
+      "eps": 1e-07,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.781,
+      "float64_cosine_min": 0.9999999999998392,
+      "float64_cosine_mean": 0.9999999999999716,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 1,
+      "geometry": "low_rank",
+      "eps": 1e-05,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.704,
+      "float64_cosine_min": 0.9999999983754443,
+      "float64_cosine_mean": 0.9999999997195573,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 1,
+      "geometry": "low_rank",
+      "eps": 0.001,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.002,
+      "float64_cosine_min": 0.9999837657276064,
+      "float64_cosine_mean": 0.9999971956201632,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 2,
+      "geometry": "isotropic",
+      "eps": 1e-07,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.672,
+      "float64_cosine_min": 0.9999999999989542,
+      "float64_cosine_mean": 0.9999999999993656,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 2,
+      "geometry": "isotropic",
+      "eps": 1e-05,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.654,
+      "float64_cosine_min": 0.9999999895680753,
+      "float64_cosine_mean": 0.9999999936664697,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 2,
+      "geometry": "isotropic",
+      "eps": 0.001,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.0,
+      "float64_cosine_min": 0.9998957962522986,
+      "float64_cosine_mean": 0.9999366688247876,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 2,
+      "geometry": "low_rank",
+      "eps": 1e-07,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.696,
+      "float64_cosine_min": 0.999999999999853,
+      "float64_cosine_mean": 0.9999999999999702,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 2,
+      "geometry": "low_rank",
+      "eps": 1e-05,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.639,
+      "float64_cosine_min": 0.99999999854006,
+      "float64_cosine_mean": 0.9999999997064398,
+      "nonidentical_pair_fraction": 1.0
+    },
+    {
+      "seed": 2,
+      "geometry": "low_rank",
+      "eps": 0.001,
+      "distinct_vectors": 10000,
+      "numpy_float32_ip_equals_one_fraction": 0.002,
+      "float64_cosine_min": 0.9999854058615165,
+      "float64_cosine_mean": 0.9999970643525261,
+      "nonidentical_pair_fraction": 1.0
+    }
+  ]
+}

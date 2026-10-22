@@ -1,0 +1,94 @@
+{
+  "config": {
+    "n_base": 20000,
+    "hub": 10000,
+    "d": 64,
+    "k": 10
+  },
+  "rows": [
+    {
+      "eps": 0.0,
+      "mean_cos": 1.0,
+      "min_cos": 1.0,
+      "indeg": 9980,
+      "n": 30000,
+      "hnsw_full": 0.6901349999999999,
+      "exact_removed": 9999,
+      "hnsw_exactdedup": 0.9973599999999999,
+      "n_reduced": 20001,
+      "cluster_reduce": 0.9974000000000001
+    },
+    {
+      "eps": 0.0001,
+      "mean_cos": 0.9999998211860657,
+      "min_cos": 0.9999994039535522,
+      "indeg": 314,
+      "n": 30000,
+      "hnsw_full": 0.948105,
+      "exact_removed": 0,
+      "hnsw_exactdedup": 0.9498200000000001,
+      "n_reduced": 20001,
+      "cluster_reduce": 0.99734
+    },
+    {
+      "eps": 0.001,
+      "mean_cos": 0.9999684691429138,
+      "min_cos": 0.9999422430992126,
+      "indeg": 246,
+      "n": 30000,
+      "hnsw_full": 0.97281,
+      "exact_removed": 0,
+      "hnsw_exactdedup": 0.968695,
+      "n_reduced": 20001,
+      "cluster_reduce": 0.9974149999999999
+    },
+    {
+      "eps": 0.003,
+      "mean_cos": 0.9997165203094482,
+      "min_cos": 0.9994726181030273,
+      "indeg": 159,
+      "n": 30000,
+      "hnsw_full": 0.9685650000000001,
+      "exact_removed": 0,
+      "hnsw_exactdedup": 0.97021,
+      "n_reduced": 20001,
+      "cluster_reduce": 0.997295
+    },
+    {
+      "eps": 0.01,
+      "mean_cos": 0.9968633055686951,
+      "min_cos": 0.9939478635787964,
+      "indeg": 378,
+      "n": 30000,
+      "hnsw_full": 0.976295,
+      "exact_removed": 0,
+      "hnsw_exactdedup": 0.974695,
+      "n_reduced": 20001,
+      "cluster_reduce": 0.997465
+    },
+    {
+      "eps": 0.03,
+      "mean_cos": 0.9728062748908997,
+      "min_cos": 0.9492428302764893,
+      "indeg": 194,
+      "n": 30000,
+      "hnsw_full": 0.97958,
+      "exact_removed": 0,
+      "hnsw_exactdedup": 0.982105,
+      "n_reduced": 20001,
+      "cluster_reduce": 0.997405
+    },
+    {
+      "eps": 0.1,
+      "mean_cos": 0.7823541760444641,
+      "min_cos": 0.5725951790809631,
+      "indeg": 174,
+      "n": 30000,
+      "hnsw_full": 0.948565,
+      "exact_removed": 0,
+      "hnsw_exactdedup": 0.9478899999999999,
+      "n_reduced": 30000,
+      "cluster_reduce": 0.981905
+    }
+  ]
+}
